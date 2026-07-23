@@ -1,0 +1,19 @@
+# Local agent and prompt notes
+AGENTS.md
+IGNORE.MD
+*.txt
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.log
+
+# Local dependencies and build output
+node_modules/
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
