@@ -24,7 +24,6 @@
   function sec(n, cls, body) { return '<section class="pd-section ' + cls + '"><div class="container-xl">' + body + '</div></section>'; }
   function heading(k, h, p) { return '<div class="pd-head"><p class="eyebrow">' + k + '</p><h2>' + h + '</h2>' + (p ? '<span>' + p + '</span>' : '') + '</div>'; }
   function product(name, price, photo) { return '<article class="plant-card"><img src="' + photo + '" alt="' + name + '" loading="lazy"><h3>' + name + '</h3><p>' + price + '</p><button type="button" aria-label="Add ' + name + '">' + icon('plus') + '</button></article>'; }
-
   var html = '';
   html += sec(1, 'diff', '<div class="split"><div>' + heading('About us', 'We are different in every way', '') + '<img class="soft-img" src="' + img.desk + '" alt="Garden planning" loading="lazy"></div><div class="value-grid"><article>' + icon('seedling') + '<h3>Passion in every work</h3><p>Patient craft, regional plants, and calm details.</p></article><article>' + icon('handshake-angle') + '<h3>Collaboration on top</h3><p>Clear decisions from sketch to final planting.</p></article><article>' + icon('water') + '<h3>Sustainability in check</h3><p>Soil, shade, and water guide every plan.</p></article><article>' + icon('wand-magic-sparkles') + '<h3>Creativity unleashed</h3><p>Soft structure that feels memorable.</p></article></div></div>');
   html += sec(2, 'dark timeline', '<div class="dark-title"><span>How it works</span><h2>Simple steps for our landscape work</h2></div><div class="steps"><article><b>01</b><h3>Design consultation</h3><p>Site goals and material direction.</p></article><article><b>02</b><h3>Design and planning</h3><p>Planting, paths, and budget.</p></article><article><b>03</b><h3>Implementation</h3><p>Construction with careful sequencing.</p></article><article><b>04</b><h3>Garden decorating</h3><p>Final pots, texture, and rhythm.</p></article></div>');
@@ -118,3 +117,4 @@
 
   });
 })(jQuery);
+
