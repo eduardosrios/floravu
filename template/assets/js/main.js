@@ -2,7 +2,7 @@
   "use strict";
 
   function logoMarkup() { return "<a class=\"brand-mark\" href=\"#home\" aria-label=\"Floravu home\"><span class=\"brand-symbol\"><img src=\"assets/images/logo-leaf-flaticon.png\" alt=\"\" aria-hidden=\"true\"></span><span class=\"brand-text\">Floravu</span></a>"; }
-  function menuMarkup() { return "<a href=\"#about\">About</a><span class=\"menu-item has-sub\"><a href=\"#services\">Services <i class=\"fa-solid fa-chevron-down\"></i></a><button type=\"button\" aria-label=\"Toggle services submenu\"><i class=\"fa-solid fa-chevron-down\"></i></button><span class=\"submenu\"><a href=\"#services\">Garden Design</a><a href=\"#shop\">Plant Care</a><a href=\"#contact\">Maintenance</a></span></span><span class=\"menu-item has-sub\"><a href=\"#projects\">Projects <i class=\"fa-solid fa-chevron-down\"></i></a><button type=\"button\" aria-label=\"Toggle projects submenu\"><i class=\"fa-solid fa-chevron-down\"></i></button><span class=\"submenu\"><a href=\"#projects\">Garden Care</a><a href=\"#projects\">Lawn Care</a><a href=\"#projects\">Planting</a></span></span><a href=\"#contact\">Contact</a>"; }
+  function menuMarkup() { return "<a href=\"#projects\">Projects</a><a href=\"#services\">Services</a><a href=\"#about\">About us</a><a href=\"#contact\">Contact</a>"; }
   function videoBlock(source, title, text, video) { return "<section class=\"pd-section video-variant\" data-video-source=\"body-section-" + source + "\"><div class=\"container-xl video-shell\">" + "<video autoplay muted loop playsinline preload=\"metadata\"><source src=\"" + video + "\" type=\"video/mp4\"></video><div><p class=\"eyebrow light\">Video variation</p><h2>" + title + "</h2><p>" + text + "</p></div></div></section>"; }
 
   var img = {
@@ -21,9 +21,10 @@
   };
 
   function icon(name) { return '<i class="fa-solid fa-' + name + '"></i>'; }
-  function sec(n, cls, body) { return '<section class="pd-section ' + cls + '"><div class="container-xl">' + body + '</div></section>'; }
+  function sec(n, cls, body) { var ids = { 1: "about", 4: "shop", 17: "services", 20: "projects" }; return '<section class="pd-section ' + cls + '"' + (ids[n] ? ' id="' + ids[n] + '"' : '') + '><div class="container-xl">' + body + '</div></section>'; }
   function heading(k, h, p) { return '<div class="pd-head"><p class="eyebrow">' + k + '</p><h2>' + h + '</h2>' + (p ? '<span>' + p + '</span>' : '') + '</div>'; }
   function product(name, price, photo) { return '<article class="plant-card"><img src="' + photo + '" alt="' + name + '" loading="lazy"><h3>' + name + '</h3><p>' + price + '</p><button type="button" aria-label="Add ' + name + '">' + icon('plus') + '</button></article>'; }
+
   var html = '';
   html += sec(1, 'diff', '<div class="split"><div>' + heading('About us', 'We are different in every way', '') + '<img class="soft-img" src="' + img.desk + '" alt="Garden planning" loading="lazy"></div><div class="value-grid"><article>' + icon('seedling') + '<h3>Passion in every work</h3><p>Patient craft, regional plants, and calm details.</p></article><article>' + icon('handshake-angle') + '<h3>Collaboration on top</h3><p>Clear decisions from sketch to final planting.</p></article><article>' + icon('water') + '<h3>Sustainability in check</h3><p>Soil, shade, and water guide every plan.</p></article><article>' + icon('wand-magic-sparkles') + '<h3>Creativity unleashed</h3><p>Soft structure that feels memorable.</p></article></div></div>');
   html += sec(2, 'dark timeline', '<div class="dark-title"><span>How it works</span><h2>Simple steps for our landscape work</h2></div><div class="steps"><article><b>01</b><h3>Design consultation</h3><p>Site goals and material direction.</p></article><article><b>02</b><h3>Design and planning</h3><p>Planting, paths, and budget.</p></article><article><b>03</b><h3>Implementation</h3><p>Construction with careful sequencing.</p></article><article><b>04</b><h3>Garden decorating</h3><p>Final pots, texture, and rhythm.</p></article></div>');
@@ -85,17 +86,43 @@
     $(window).on('scroll resize', syncTopbar); syncTopbar();
     $('.contact-form').on('submit', function (e) { e.preventDefault(); $(this).addClass('sent'); $(this).find('button').text('Request Sent'); });
 
-    // ETAPA 05 dynamic layer
-    var heroSlides = ['assets/images/hero-candidate-1.jpg', 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80', 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1800&q=80'];
-    var heroIndex = 0;
-    setInterval(function () {
-      heroIndex = (heroIndex + 1) % heroSlides.length;
-      if (window.gsap) gsap.to('.hero-bg', { opacity: 0, duration: .45, onComplete: function () { $('.hero-bg').css('background-image', 'url("' + heroSlides[heroIndex] + '")'); gsap.to('.hero-bg', { opacity: 1, duration: .7 }); } });
-      else $('.hero-bg').css('background-image', 'url("' + heroSlides[heroIndex] + '")');
-      $('.hero-progress span:first').text('0' + (heroIndex + 1));
-      $('.progress-track i').css('width', ((heroIndex + 1) / heroSlides.length * 100) + '%');
-    }, 6500);
-
+    // Circular-project carousel.
+    var heroTrack = document.querySelector('.hero-track');
+    function heroCardStep() {
+      var card = heroTrack && heroTrack.querySelector('.hero-project');
+      return card ? card.getBoundingClientRect().width : 320;
+    }
+    function updateHeroStatus() {
+      if (!heroTrack) return;
+      var projects = Array.prototype.slice.call(heroTrack.querySelectorAll('.hero-project'));
+      if (!projects.length) return;
+      var nearest = projects.reduce(function (best, item, index) {
+        var distance = Math.abs(item.offsetLeft - heroTrack.scrollLeft);
+        return distance < best.distance ? { index: index, distance: distance } : best;
+      }, { index: 0, distance: Infinity });
+      $('.hero-carousel-status').text(String(nearest.index + 1).padStart(2, '0') + ' / ' + String(projects.length).padStart(2, '0'));
+    }
+    $('.hero-carousel-next').on('click', function () {
+      if (!heroTrack) return;
+      var max = heroTrack.scrollWidth - heroTrack.clientWidth;
+      heroTrack.scrollTo({ left: heroTrack.scrollLeft >= max - 8 ? 0 : heroTrack.scrollLeft + heroCardStep(), behavior: 'smooth' });
+    });
+    $('.hero-carousel-prev').on('click', function () {
+      if (!heroTrack) return;
+      var max = heroTrack.scrollWidth - heroTrack.clientWidth;
+      heroTrack.scrollTo({ left: heroTrack.scrollLeft <= 8 ? max : heroTrack.scrollLeft - heroCardStep(), behavior: 'smooth' });
+    });
+    if (heroTrack) heroTrack.addEventListener('scroll', updateHeroStatus, { passive: true });
+    updateHeroStatus();
+    $('.hero-menu-toggle').on('click', function () {
+      var open = !$('.hero-header').hasClass('menu-open');
+      $('.hero-header').toggleClass('menu-open', open);
+      $(this).attr('aria-expanded', String(open));
+    });
+    $('.hero-nav a').on('click', function () {
+      $('.hero-header').removeClass('menu-open');
+      $('.hero-menu-toggle').attr('aria-expanded', 'false');
+    });
     if (!$('.media-modal').length) $('body').append('<div class="media-modal" aria-hidden="true"><div class="media-backdrop"></div><div class="media-dialog"><button class="media-close" type="button" aria-label="Close media"><i class="fa-solid fa-xmark"></i></button><div class="media-stage"></div></div></div><a class="floating-contact" href="#contact" aria-label="Request consultation"><i class="fa-solid fa-message"></i><span>Consult</span></a>');
     function openModal(markup) { $('.media-stage').html(markup); $('.media-modal').attr('aria-hidden', 'false').addClass('open'); if (window.SimpleBar) $('.media-stage [data-simplebar]').each(function () { if (!this.SimpleBar) new SimpleBar(this); }); }
     function closeModal() { $('.media-modal').removeClass('open').attr('aria-hidden', 'true'); $('.media-stage').empty(); }
@@ -117,4 +144,3 @@
 
   });
 })(jQuery);
-
