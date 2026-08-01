@@ -3,7 +3,7 @@
 
   function logoMarkup() { return "<a class=\"brand-mark\" href=\"#home\" aria-label=\"Floravu home\"><span class=\"brand-symbol\"><img src=\"assets/images/logo-leaf-flaticon.png\" alt=\"\" aria-hidden=\"true\"></span><span class=\"brand-text\">Floravu</span></a>"; }
   function menuMarkup() { return "<a href=\"#projects\">Projects</a><a href=\"#services\">Services</a><a href=\"#about\">About us</a><a href=\"#contact\">Contact</a>"; }
-  function videoBlock(source, title, text, video) { return "<section class=\"pd-section video-variant\" data-video-source=\"body-section-" + source + "\"><div class=\"container-xl video-shell\">" + "<video autoplay muted loop playsinline preload=\"metadata\"><source src=\"" + video + "\" type=\"video/mp4\"></video><div><p class=\"eyebrow light\">Video variation</p><h2>" + title + "</h2><p>" + text + "</p></div></div></section>"; }
+  function videoBlock(source, title, text, video) { return "<section class=\"pd-section video-variant\" data-video-source=\"body-section-" + source + "\"><div class=\"container-xl video-shell\"><video autoplay muted loop playsinline preload=\"metadata\"><source src=\"" + video + "\" type=\"video/mp4\"></video><div><p class=\"eyebrow light\">Video variation</p><h2>" + title + "</h2><p>" + text + "</p></div></div></section>"; }
 
   var img = {
     desk: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=900&q=80",

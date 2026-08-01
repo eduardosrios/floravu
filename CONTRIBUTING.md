@@ -13,7 +13,7 @@ Floravu is a proprietary project. Contributions may be reviewed, accepted, modif
 
 This project is an HTML, CSS, and JavaScript website template. Do not introduce React, a database, an admin system, or server-side application code unless the repository owner explicitly changes the scope.
 
-Future implementation should prioritize:
+Project changes should prioritize:
 
 - Premium visual quality suitable for a professional gardening and landscaping brand.
 - Responsive behavior across desktop, tablet, and mobile.

@@ -2,9 +2,7 @@
 
 ## Supported Versions
 
-Floravu is in early repository setup. No production website version has been released yet.
-
-Security review will apply to the current active version once website implementation begins.
+Security fixes apply to the latest release and the current main branch. Older releases may not receive updates.
 
 ## Reporting a Vulnerability
 
@@ -20,7 +18,7 @@ Please include:
 
 ## Security Expectations
 
-Future website code should follow these principles:
+Project code should follow these principles:
 
 - Avoid unnecessary third-party scripts.
 - Keep dependencies intentional and current.

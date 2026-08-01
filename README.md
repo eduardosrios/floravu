@@ -1,15 +1,27 @@
 # Floravu
 
-Floravu is a gardening and landscaping website project for a professional outdoor services brand. The project is planned as a static HTML, CSS, and JavaScript front page template for services such as garden design, landscape care, planting, pruning, irrigation, lawn maintenance, outdoor living spaces, and sustainable property care.
-
-The website implementation has not started yet. This repository currently contains the baseline repository documentation and proprietary license terms that will guide the project.
+Floravu is a responsive gardening and landscaping website template for professional outdoor service brands. It presents garden design, landscape care, planting, pruning, irrigation, lawn maintenance, outdoor living, and sustainable property care through a polished static front end.
 
 ## Project Scope
 
 - Static front-end template built with HTML, CSS, and JavaScript.
 - No React, database, admin dashboard, or server-side application.
-- Future implementation will focus on premium responsive design for desktop, tablet, and mobile.
+- Responsive layouts for desktop, tablet, and mobile.
+- Interactive navigation, project carousel, galleries, forms, and motion effects.
+- Locally stored front-end libraries with focused third-party media usage.
 - Target niche: gardening, landscaping, lawn care, horticulture, floriculture, arboriculture, garden design, landscape architecture, outdoor services, property maintenance, and plant care.
+
+## Project Structure
+
+- template/index.html: main website page.
+- template/assets/css/style.css: layout, components, and responsive styles.
+- template/assets/js/main.js: interactions and generated content sections.
+- template/assets/images: project image assets.
+- template/assets/vendor: locally stored front-end libraries.
+
+## Local Preview
+
+Serve the repository with any static web server, then open template/index.html through that server. The template does not require a build step or server-side runtime.
 
 ## Repository Resources
 
