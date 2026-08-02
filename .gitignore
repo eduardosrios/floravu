@@ -2,8 +2,10 @@
 AGENTS.md
 IGNORE.MD
 *.txt
+design-qa.md
 
 # Temporary files
+.playwright-mcp/
 tmp/
 temp/
 *.tmp
