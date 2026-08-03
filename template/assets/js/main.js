@@ -3,6 +3,13 @@
 
   function logoMarkup() { return "<a class=\"brand-mark\" href=\"#home\" aria-label=\"Floravu home\"><span class=\"brand-symbol\"><img src=\"assets/images/logo-leaf-flaticon.png\" alt=\"\" aria-hidden=\"true\"></span><span class=\"brand-text\">Floravu</span></a>"; }
   function menuMarkup() { return "<a href=\"#projects\">Projects</a><a href=\"#services\">Services</a><a href=\"#about\">About us</a><a href=\"#contact\">Contact</a>"; }
+  var stableReferenceDisplayNumbers = {
+    2: 1, 3: 2, 4: 4, 5: 5, 6: 7, 7: 8, 8: 10, 9: 11, 10: 12, 11: 13,
+    12: 14, 14: 15, 15: 16, 16: 17, 17: 18, 18: 19, 19: 20, 21: 21, 22: 22,
+    23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31,
+    32: 32, 35: 33, 36: 34
+  };
+  var stableVideoDisplayNumbers = { 3: 3, 5: 6, 7: 9 };
   function videoBlock(source, title, text, video) {
     var media = '<video autoplay muted loop playsinline preload="metadata"><source src="' + video + '" type="video/mp4"></video>';
     var body = '';
@@ -15,7 +22,7 @@
       body = '<div class="video-cta-copy"><p class="eyebrow light">Expert plant care</p><h2>' + title + '</h2><p>' + text + '</p><a class="tiny-btn light" href="#contact">Book consultation</a></div>';
     }
 
-    return '<section class="pd-section video-variant video-reference-' + source + '" data-video-source="body-section-' + source + '"><div class="container-xl video-shell">' + media + body + '</div></section>';
+    return '<section class="pd-section video-variant video-reference-' + source + '" data-video-source="body-section-' + source + '" data-display-number="' + stableVideoDisplayNumbers[source] + '"><div class="container-xl video-shell">' + media + body + '</div></section>';
   }
 
   var img = {
@@ -34,7 +41,7 @@
   };
 
   function icon(name) { return '<i class="fa-solid fa-' + name + '"></i>'; }
-  function sec(n, cls, body) { var ids = { 1: "about", 4: "shop", 17: "services", 20: "projects" }; return '<section class="pd-section ' + cls + '" data-reference-source="' + n + '"' + (ids[n] ? ' id="' + ids[n] + '"' : '') + '><div class="container-xl">' + body + '</div></section>'; }
+  function sec(n, cls, body) { var ids = { 1: "about", 4: "shop", 17: "services", 20: "projects" }; return '<section class="pd-section ' + cls + '" data-reference-source="' + n + '" data-display-number="' + stableReferenceDisplayNumbers[n] + '"' + (ids[n] ? ' id="' + ids[n] + '"' : '') + '><div class="container-xl">' + body + '</div></section>'; }
   function heading(k, h, p) { return '<div class="pd-head"><p class="eyebrow">' + k + '</p><h2>' + h + '</h2>' + (p ? '<span>' + p + '</span>' : '') + '</div>'; }
   function product(name, price, photo) { return '<article class="plant-card"><img src="' + photo + '" alt="' + name + '" loading="lazy"><h3>' + name + '</h3><p>' + price + '</p><button type="button" aria-label="Add ' + name + '">' + icon('plus') + '</button></article>'; }
   var inspectionCopyState = { multi: false, value: "" };
@@ -172,24 +179,24 @@
       var controlNumber = 0;
       var videoSource = $section.attr("data-video-source");
       var newReferenceNumber = parseInt($section.attr("data-reference-number"), 10);
+      var stableDisplayNumber = parseInt($section.attr("data-display-number"), 10);
+      var hasStableDisplayNumber = !isNaN(stableDisplayNumber);
 
       if (newReferenceNumber >= 73) {
         sourceIndex = newReferenceNumber;
         controlNumber = newReferenceNumber;
       } else if (videoSource) {
-        legacyControlNumber += 1;
-        controlNumber = legacyControlNumber;
         sourceIndex = parseInt(videoSource.replace("body-section-", ""), 10);
+        controlNumber = hasStableDisplayNumber ? stableDisplayNumber : legacyControlNumber + 1;
       } else if ($section.hasClass("contact-band")) {
-        legacyControlNumber += 1;
-        controlNumber = legacyControlNumber;
+        controlNumber = hasStableDisplayNumber ? stableDisplayNumber : 35;
         kind = "footer";
       } else {
-        legacyControlNumber += 1;
-        controlNumber = legacyControlNumber;
         sourceIndex = parseInt($section.attr("data-reference-source"), 10);
+        controlNumber = hasStableDisplayNumber ? stableDisplayNumber : legacyControlNumber + 1;
       }
 
+      if (!(newReferenceNumber >= 73)) legacyControlNumber = Math.max(legacyControlNumber, controlNumber);
       $section.attr("data-display-number", controlNumber);
       $section.append(inspectionControlsMarkup(controlNumber, kind, sourceIndex));
     });
@@ -265,14 +272,9 @@
   html += videoBlock(3, 'Garden motion study', 'A moving greenhouse variant of the service card rhythm.', 'https://videos.pexels.com/video-files/34729828/14721996_1080_1920_30fps.mp4');
   html += sec(4, 'products', heading('Indoor plants', 'Indoor Favorites', '<button class="pill-btn" type="button">View all items</button>') + '<div class="product-row">' + product('Sansevieria Trifasciata', '$29.00', img.indoor) + product('Golden Pothos', '$18.00', img.leaf) + product('Pruning Shears', '$34.00', img.tools) + product('Earth Matte Pot', '$42.00', img.pot) + '</div>');
   html += sec(5, 'dark cta', '<div class="cta-pill"><div>' + heading('Expert Plant Care', 'Expert plant care at your doorstep', 'From pruning to soil rescue, our specialists keep gardens strong.') + '<a href="#contact" class="tiny-btn light">Book consultation</a></div><div class="float-imgs"><img src="' + img.hands + '" alt="Seedling" loading="lazy"><img src="' + img.pot + '" alt="Potted plant" loading="lazy"></div></div>');
-  html += videoBlock(5, 'Indoor plant care in motion', 'A video duplicate that keeps the dark consultation structure.', 'https://videos.pexels.com/video-files/7351637/7351637-hd_1920_1080_24fps.mp4');
   html += sec(6, 'icons', heading('Plant benefits', 'Our Eco-Commitment', '') + '<div class="icon-grid"><article>' + icon('recycle') + '<h3>Biodegradable Packing</h3><p>Plastic-light delivery.</p></article><article>' + icon('leaf') + '<h3>Carbon-Neutral Shipping</h3><p>Consolidated routes.</p></article><article>' + icon('lock') + '<h3>Ethical Local Sourcing</h3><p>Regional growers.</p></article></div>');
   html += sec(7, 'seasonal', heading('Curated for the moment', 'Seasonal Best Collections', '') + '<div class="seasonal-cards"><article><img src="' + img.indoor + '" alt="Areca"><h3>Areca Palm</h3><a href="#shop">Explore Collection</a></article><article><img src="' + img.leaf + '" alt="Peace Lily"><h3>Peace Lily</h3><a href="#shop">Explore Collection</a></article><article><img src="' + img.pot + '" alt="Monstera"><h3>Monstera Deliciosa</h3><a href="#shop">Explore Collection</a></article></div>');
-  html += videoBlock(7, 'Seasonal care in motion', 'A video duplicate for the product collection section.', 'https://videos.pexels.com/video-files/9467011/9467011-uhd_2160_3840_25fps.mp4');
-  html += sec(8, 'peach band', '<h2>Learn how we take care of your plant at every stage from our greenhouse to your home.</h2>' + icon('hand-holding-heart'));
-  html += sec(9, 'dark sellers', '<div class="mini-head"><h2>Here are the best seller</h2><a href="#shop">Shop all plants</a></div><div class="seller-row">' + product('Monstera Deliciosa', '$19.00', img.indoor) + product('Pink Anthurium', '$58.00', img.pot) + product('Aglaonema Red', '$38.00', img.leaf) + '</div>');
   html += sec(10, 'planter', '<div class="split"><div class="stack-img"><img src="' + img.pot + '" alt="Planter"><img src="' + img.indoor + '" alt="Plant stack"></div><div>' + heading('Unique Plant', 'Assemble your own unique planter', '') + '<ul class="check-list"><li>Get exclusive plant offers</li><li>Set watering reminders</li><li>Collect seasonal tips</li><li>Register plant updates</li></ul><a class="tiny-btn coral" href="#contact">Tell me more</a></div></div>');
-  html += sec(11, 'benefits dark', '<div class="strip-grid"><article>' + icon('seedling') + '<h3>Healthy Plants</h3><p>Fresh handpicked plants.</p></article><article>' + icon('truck-fast') + '<h3>Fast Delivery</h3><p>Carefully packed.</p></article><article>' + icon('sun-plant-wilt') + '<h3>Easy Care</h3><p>Low-maintenance picks.</p></article><article>' + icon('headset') + '<h3>Expert Support</h3><p>Specialist guidance.</p></article></div>');
   html += sec(12, 'shop-grid', heading('Most Popular Plants', 'Fresh choices for quiet interiors', '') + '<div class="grid-products">' + product('Monstera', '$45.00', img.indoor) + product('Rubber Plant', '$40.00', img.leaf) + product('Snake Plant', '$30.00', img.pot) + product('Peace Lily', '$35.00', img.hands) + product('Pothos', '$28.00', img.indoor) + product('Aloe Vera', '$25.00', img.pot) + product('ZZ Plant', '$72.00', img.leaf) + product('Fiddle Fig', '$60.00', img.indoor) + '</div>');
   html += sec(14, 'editorial', '<div class="editorial-grid"><div>' + heading('Plant Caring', 'Tree Love<br>Life Shine', '') + '<a class="tiny-btn" href="#services">Choose Green</a></div><article><img src="' + img.pot + '" alt="Small plant"><span>Growline</span></article><article><h3>Gardening</h3><p>Plants reduce stress, refresh air, and add daily focus.</p></article><img src="' + img.woman + '" alt="Gardener"></div>');
   html += sec(15, 'mini-shop', heading('Plant shop', 'House Plant', 'Best plants for soothing and purifying oxygen.') + '<div class="mini-products">' + product('Asplenium', 'Potted', img.indoor) + product('Succulent', 'Semi', img.pot) + product('Monstera', 'Small', img.leaf) + product('Aloe Vera', 'Medium', img.hands) + '</div>');
@@ -284,8 +286,6 @@
   html += sec(22, 'carousel', '<h2>Our Plants</h2><div class="thin-products" data-simplebar>' + product('Arborvitae', '$75', img.indoor) + product('Arborvine', '$55', img.leaf) + product('Arborrose', '$20', img.pot) + product('Arbor Tree', '$82', img.hands) + '</div>');
   html += sec(23, 'care-split', '<div class="split"><div>' + heading('About company', 'Professional Garden Care', 'Full service lawn, landscape, and garden health.') + '<a class="tiny-btn green" href="#contact">Learn More</a></div><img class="round-img" src="' + img.work + '" alt="Professional care"></div>');
   html += sec(24, 'offers', heading('Our services', 'What Can We Offer', '') + '<div class="offer-grid"><article>' + icon('sprout') + '<b>01</b><h3>Garden Design</h3><p>Plant and bed planning.</p></article><article>' + icon('faucet-drip') + '<b>02</b><h3>Irrigation System</h3><p>Water-smart setups.</p></article><article>' + icon('tree') + '<b>03</b><h3>Tree Services</h3><p>Pruning and recovery.</p></article><article>' + icon('scissors') + '<b>04</b><h3>Hedge Cutting</h3><p>Sharp structure.</p></article></div>');
-  html += sec(25, 'testimonial', '<div class="testimonial-wrap"><img src="' + img.pot + '" alt="Succulent"><blockquote><span>Testimonials</span><h2>What Clients Say</h2><p>Floravu turned our small terrace into a garden that feels fresh, intentional, and easy to maintain.</p><cite>Jane Gard</cite></blockquote><img src="' + img.leaf + '" alt="Cactus"></div>');
-  html += sec(26, 'care-steps', heading('', 'Taking care of your plants the right way', 'Follow this instruction.') + '<div class="care-cards"><article><img src="' + img.hands + '" alt="Inoculate"><b>01</b><h3>Inoculate</h3><p>Apply bacterial coating.</p></article><article><img src="' + img.woman + '" alt="Sow"><b>02</b><h3>Sow the seeds</h3><p>Prepare moist soil.</p></article><article><img src="' + img.pot + '" alt="Pots"><b>03</b><h3>Place the pots</h3><p>Use bright indirect light.</p></article></div>');
   html += sec(27, 'product-band', '<h2>Make your home beautiful with these products</h2><div class="green-products">' + product('Dumb Cane', '$15.99', img.indoor) + product('Spider Plant', '$12.99', img.leaf) + product('Spotted Ever', '$18.99', img.pot) + product('Freddie Plant', '$10.99', img.hands) + '</div>');
   html += sec(28, 'stats', '<div class="stat-layout"><div><b>130+</b><span>Satisfied homeowners</span></div><div><h2>Growing Green Together</h2><p>Family gardens, daily rituals, and long-term care plans.</p></div><div class="stat-photo-grid"><img src="' + img.woman + '" alt="Family"><img src="' + img.work + '" alt="Planting"><article><b>3k+</b><span>Urban plants</span></article><img src="' + img.tools + '" alt="Work"></div><div><b>20+</b><span>Years of practice</span></div></div>');
   html += sec(29, 'accordion-sec', '<div class="accordion-layout"><div>' + heading('Services', 'Landscape plans for daily life', 'Care, design, and maintenance in one place.') + '</div><img src="' + img.work + '" alt="Watering"><div class="accordion-stack"><button class="active" type="button">Garden Design Landscaping</button><button type="button">Garden Maintenance</button><button type="button">Planting and Pruning</button><button type="button">Garden Consultation</button><button type="button">Seasonal Preparation</button></div></div>');
@@ -293,9 +293,8 @@
   html += sec(31, 'priority', '<div class="priority-grid"><div><h2>Your property safety and satisfaction are top priorities</h2><p>Inspection, equipment, and planning before every project.</p></div><article><b>25+</b><span>Years of experience</span></article><article class="green"><b>1000+</b><span>Trees safely removed</span></article><img src="' + img.work + '" alt="Garden expert"></div>');
   html += sec(32, 'trusted', '<div class="process-grid"><img src="' + img.work + '" alt="Gardener"><div><h2>Your trusted process from start to perfect finish</h2><article><b>01</b><h3>Free consultation and assessment</h3></article><article><b>02</b><h3>Customized lawn care plan</h3></article><article><b>03</b><h3>Professional lawn service</h3></article><article><b>04</b><h3>Ongoing care and follow-up</h3></article></div></div>');
   html += sec(35, 'power', '<h2>Plants. The Power On Your Side.</h2><div class="power-cards"><article>' + icon('house') + '<h3>Garden Plant</h3><p>Therapeutic homes.</p></article><article>' + icon('briefcase') + '<h3>Office Plant</h3><p>More oxygen.</p></article><article>' + icon('tree-city') + '<h3>Home Plant</h3><p>Cleaner rooms.</p></article><article>' + icon('building') + '<h3>Apartment Plant</h3><p>Balcony friendly.</p></article><article>' + icon('seedling') + '<h3>Garden Plant</h3><p>Layered beds.</p></article><article>' + icon('road') + '<h3>Streets Plant</h3><p>Urban planting.</p></article></div>');
-  html += sec(36, 'mission', heading('Mission and Values', 'Our key pillars', '') + '<div class="mission-row"><article>' + icon('hands-holding-circle') + '<h3>Social Consciousness</h3></article><article>' + icon('leaf') + '<h3>Sustainability</h3></article><article>' + icon('people-group') + '<h3>Community Improvement</h3></article><article>' + icon('scale-balanced') + '<h3>Economic Impact</h3></article><article>' + icon('handshake') + '<h3>Fair Trade</h3></article></div>');
   if (window.FloravuNewSections) html += window.FloravuNewSections.render();
-  html += '<section class="pd-section contact-band" id="contact"><div class="container-xl"><div class="contact-panel"><div><p class="eyebrow light">Ready to begin</p><h2>Transform your garden with a calmer, greener plan.</h2></div><form class="contact-form"><label><span>Name</span><input type="text" placeholder="Your name"></label><label><span>Email</span><input type="email" placeholder="you@example.com"></label><button type="submit">Request Consult</button></form></div></div></section>';
+  html += '<section class="pd-section contact-band" id="contact" data-display-number="35"><div class="container-xl"><div class="contact-panel"><div><p class="eyebrow light">Ready to begin</p><h2>Transform your garden with a calmer, greener plan.</h2></div><form class="contact-form"><label><span>Name</span><input type="text" placeholder="Your name"></label><label><span>Email</span><input type="email" placeholder="you@example.com"></label><button type="submit">Request Consult</button></form></div></div></section>';
   html += '<footer class="site-footer" aria-label="Floravu footer"><div class="footer-inner"><div class="footer-contact"><a href="mailto:hello@floravu.com">hello@floravu.com</a><span>+1 415 555 0198 | +1 415 555 0142</span><small>&copy; 2026 Floravu. All Rights Reserved.</small></div><div class="footer-social"><a href="#home" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#home" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a><a href="#home" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div><div class="footer-links"><a href="#home">Privacy Policy</a><a href="#home">Legal Notice</a><a href="#home">Cookies Policy</a><span>Design by Floravu</span></div></div></footer>';
 
   $(function () {
@@ -304,6 +303,7 @@
     $('#bodyContent').html(html);
     if (window.FloravuNewSections) window.FloravuNewSections.init();
     enhanceReferenceFidelity();
+    if (window.FloravuExactSections) window.FloravuExactSections.apply();
     initInspectionControls();
     $('.site-footer .footer-contact').prepend(logoMarkup());
     if (window.SimpleBar) $('[data-simplebar]').each(function () { if (!this.SimpleBar) new SimpleBar(this); });

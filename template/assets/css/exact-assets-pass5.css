@@ -1,0 +1,78 @@
+.xr-section-18 .container-xl,.xr-section-19 .container-xl,.xr-section-20 .container-xl,.xr-section-134 .container-xl,.xr-section-136 .container-xl{max-width:none!important;padding:0!important}
+
+.xr-section-18 .xr-18-exact{min-height:auto!important;padding:4.75vw 5.15vw 0!important;background:#fff!important;color:#111!important}
+.xr-section-18 .xr18-exact-cards,.xr-section-134 .xr18-exact-cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:1.25vw!important;margin:0!important}
+.xr-section-18 .xr18-exact-cards a,.xr-section-134 .xr18-exact-cards a{display:block!important;margin:0!important;text-decoration:none!important}
+.xr-section-18 .xr18-exact-cards img,.xr-section-134 .xr18-exact-cards img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;border-radius:0!important;box-shadow:none!important}
+.xr-section-18 .xr18-about{display:grid!important;grid-template-columns:37vw 1fr!important;gap:8.5vw!important;align-items:start!important;margin-top:3.8vw!important}
+.xr-section-18 .xr18-about>img{display:block!important;width:100%!important;height:auto!important;border-radius:0!important;object-fit:contain!important;box-shadow:none!important}
+.xr-section-18 .xr18-about>div{padding-top:.6vw!important}
+.xr-section-18 .xr18-about small{display:block!important;color:#333!important;font-size:.7vw!important}
+.xr-section-18 .xr18-about small i{margin-right:.45vw!important;color:#395f44!important}
+.xr-section-18 .xr18-about h2{margin:1.2vw 0 1.1vw!important;color:#18392e!important;font-family:Manrope,sans-serif!important;font-size:2.45vw!important;font-weight:550!important;letter-spacing:-.05em!important;line-height:1!important}
+.xr-section-18 .xr18-about p{max-width:44vw!important;margin:0!important;color:#777!important;font-size:.72vw!important;line-height:1.7!important}
+.xr-section-18 .xr18-about section{display:grid!important;grid-template-columns:1fr 1fr!important;gap:2vw!important;margin-top:2.1vw!important}
+.xr-section-18 .xr18-about strong{display:grid!important;grid-template-columns:2.2vw 1fr!important;align-items:center!important;color:#28453a!important;font-size:1vw!important;font-weight:500!important;line-height:1.2!important}
+.xr-section-18 .xr18-about strong i{grid-row:1/3!important;font-size:1.8vw!important}
+
+.xr-section-134 .xr-134-exact{min-height:auto!important;padding:4.75vw 5.15vw 4.5vw!important;background:#fff!important;color:#111!important}
+
+.xr-section-19 .xr-19-exact{min-height:auto!important;padding:0!important;overflow:hidden!important;background:#fff!important;color:#111!important}
+.xr-section-19 .xr19-about-strip{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;border-radius:0!important;box-shadow:none!important}
+.xr-section-19 .xr19-service-preview,.xr-section-20 .xr20-service-tail,.xr-section-136 .xr-136-exact{background:#effce8 url('../images/exact/s136-texture.jpg') repeat!important;color:#18392e!important}
+.xr-section-19 .xr19-service-preview{height:33.7vw!important;padding:4.5vw 4.75vw 0!important;overflow:hidden!important;text-align:center!important}
+.xr-section-19 .xr19-service-preview header small,.xr-section-136 .xr-136-exact header small{display:block!important;color:#234638!important;font-size:.67vw!important}
+.xr-section-19 .xr19-service-preview header small i,.xr-section-136 .xr-136-exact header small i{margin-right:.4vw!important}
+.xr-section-19 .xr19-service-preview header h2,.xr-section-136 .xr-136-exact header h2{margin:1.25vw 0 0!important;color:#18392e!important;font-family:Manrope,sans-serif!important;font-size:3.35vw!important;font-weight:550!important;letter-spacing:-.055em!important;line-height:1.08!important}
+.xr-section-19 .xr19-service-preview .xr136-exact-cards{margin-top:4.6vw!important}
+
+.xr136-exact-cards{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:1.25vw!important}
+.xr136-exact-cards a{display:block!important;margin:0!important;text-decoration:none!important}
+.xr136-exact-cards img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;border-radius:0!important;box-shadow:none!important}
+
+.xr-section-20 .xr-20-exact{min-height:auto!important;padding:0!important;background:#fff!important;color:#18392e!important}
+.xr-section-20 .xr20-service-tail{height:34vw!important;padding:0 4.75vw!important;text-align:center!important}
+.xr-section-20 .xr20-service-tail>p,.xr-section-136 .xr-136-exact>p{margin:2.55vw 0 0!important;color:#385348!important;font-size:.66vw!important}
+.xr-section-20 .xr20-service-tail>p a,.xr-section-136 .xr-136-exact>p a{color:#18392e!important;text-decoration:underline!important}
+.xr-section-20 .xr20-best-work{height:27.15vw!important;padding-top:6.8vw!important;text-align:center!important;background:#fff!important}
+.xr-section-20 .xr20-best-work small{color:#28483b!important;font-size:.67vw!important}
+.xr-section-20 .xr20-best-work h2{margin:1.25vw 0 1.6vw!important;color:#18392e!important;font-family:Manrope,sans-serif!important;font-size:3.1vw!important;font-weight:550!important;letter-spacing:-.055em!important;line-height:1!important}
+.xr-section-20 .xr20-best-work nav{display:flex!important;justify-content:center!important;gap:.65vw!important}
+.xr-section-20 .xr20-best-work button{margin:0!important;padding:.55vw 1.1vw!important;border:1px solid #486153!important;border-radius:.2vw!important;background:#fff!important;color:#18392e!important;font-size:.65vw!important}
+.xr-section-20 .xr20-best-work button.active{background:#365f42!important;color:#fff!important}
+
+.xr-section-136 .xr-136-exact{min-height:auto!important;padding:5.45vw 4.75vw 4.8vw!important;text-align:center!important}
+.xr-section-136 .xr136-exact-cards{margin-top:4.6vw!important}
+
+.xr-section-86 .xr-86-exact header h2{font-size:2.6vw!important}
+.xr-section-27 .xr27-exact-cards,.xr-section-92 .xr27-exact-cards,.xr-section-143 .xr27-exact-cards{margin-top:.4vw!important}
+.xr-section-98 .xr-98-exact,.xr-section-148 .xr-98-exact{padding-left:10.6vw!important}
+
+@media(max-width:767px){
+  .xr-section-18 .xr-18-exact,.xr-section-134 .xr-134-exact{padding:34px 22px 44px!important}
+  .xr-section-18 .xr18-exact-cards,.xr-section-134 .xr18-exact-cards{grid-template-columns:1fr!important;gap:18px!important}
+  .xr-section-18 .xr18-about{grid-template-columns:1fr!important;gap:28px!important;margin-top:34px!important}
+  .xr-section-18 .xr18-about>div{padding:0!important}
+  .xr-section-18 .xr18-about small{font-size:9px!important}
+  .xr-section-18 .xr18-about h2{margin:12px 0!important;font-size:30px!important}
+  .xr-section-18 .xr18-about p{max-width:none!important;font-size:11px!important}
+  .xr-section-18 .xr18-about section{gap:14px!important;margin-top:22px!important}
+  .xr-section-18 .xr18-about strong{grid-template-columns:28px 1fr!important;font-size:11px!important}
+  .xr-section-18 .xr18-about strong i{font-size:20px!important}
+  .xr-section-19 .xr19-service-preview{height:430px!important;padding:42px 22px 0!important}
+  .xr-section-19 .xr19-service-preview header small,.xr-section-136 .xr-136-exact header small{font-size:9px!important}
+  .xr-section-19 .xr19-service-preview header h2,.xr-section-136 .xr-136-exact header h2{margin-top:12px!important;font-size:29px!important}
+  .xr-section-19 .xr19-service-preview .xr136-exact-cards,.xr-section-136 .xr136-exact-cards{margin-top:28px!important}
+  .xr136-exact-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+  .xr-section-20 .xr20-service-tail{height:auto!important;padding:0 22px 34px!important}
+  .xr-section-20 .xr20-service-tail>p,.xr-section-136 .xr-136-exact>p{margin-top:24px!important;font-size:9px!important}
+  .xr-section-20 .xr20-best-work{height:auto!important;padding:48px 22px 60px!important}
+  .xr-section-20 .xr20-best-work small{font-size:9px!important}
+  .xr-section-20 .xr20-best-work h2{margin:12px 0 20px!important;font-size:30px!important}
+  .xr-section-20 .xr20-best-work nav{flex-wrap:wrap!important;gap:8px!important}
+  .xr-section-20 .xr20-best-work button{padding:7px 12px!important;font-size:9px!important}
+  .xr-section-136 .xr-136-exact{padding:42px 22px 50px!important}
+  .xr-section-86 .xr-86-exact header h2{font-size:26px!important}
+  .xr-section-27 .xr27-exact-cards,.xr-section-92 .xr27-exact-cards,.xr-section-143 .xr27-exact-cards{margin-top:28px!important}
+  .xr-section-98 .xr-98-exact,.xr-section-148 .xr-98-exact{padding-left:22px!important}
+}

@@ -1,0 +1,4 @@
+.xr-section-137 .xr-137{background-image:linear-gradient(rgba(17,53,35,.34),rgba(17,53,35,.34)),url(../images/generated/sustainable-garden-background.png);background-position:center;background-size:cover}
+.xr-section-16 .xr-16 header,.xr-section-129 .xr-129 header{display:grid!important;grid-template-columns:minmax(850px,1fr) auto;align-items:start!important}
+.xr-section-16 .xr-16 header h2,.xr-section-129 .xr-129 header h2{width:auto!important;max-width:none!important;font-size:82px!important}.xr-section-16 .xr-16 header h2 span,.xr-section-129 .xr-129 header h2 span{display:inline!important}
+@media(max-width:800px){.xr-section-16 .xr-16 header,.xr-section-129 .xr-129 header{grid-template-columns:1fr}.xr-section-16 .xr-16 header h2,.xr-section-129 .xr-129 header h2{font-size:30px!important}}

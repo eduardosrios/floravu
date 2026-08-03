@@ -40,7 +40,10 @@
     return '<button class="ns-btn ' + (cls || '') + '" type="button">' + label + ' ' + icon('arrow-right') + '</button>';
   }
 
+  var removedSectionNumbers = { 130: true, 141: true };
+
   function section(number, type, body, extra) {
+    if (removedSectionNumbers[number]) return '';
     var ids = { 83: 'about', 111: 'projects' };
     return '<section class="pd-section new-section ns-' + type + (extra ? ' ' + extra : '') + '"' + (ids[number] ? ' id="' + ids[number] + '"' : '') + ' data-reference-number="' + number + '" data-original-extension="' + originalExtensions[number] + '"><div class="container-xl">' + body + '</div></section>';
   }

@@ -1,0 +1,16 @@
+/* Explicit specificity: legacy section classes also target these headings. */
+.xr-section-154 .xr-154 h2{font-size:54px!important}
+.xr-section-1 .xr-1 h2,.xr-section-130 .xr-130 h2{font-size:82px!important}.xr-section-1 .xr-timeline-steps h3,.xr-section-130 .xr-timeline-steps h3{font-size:22px!important}.xr-section-1 .xr-timeline-steps p,.xr-section-130 .xr-timeline-steps p{font-size:14px!important}.xr-section-1 .xr-timeline-steps b,.xr-section-130 .xr-timeline-steps b{font-size:16px!important}
+.xr-section-4 .xr-4 h2,.xr-section-8 .xr-8 h2,.xr-section-9 .xr-8 h2,.xr-section-11 .xr-11 h2,.xr-section-14 .xr-14 h2,.xr-section-24 .xr-24 h2,.xr-section-29 .xr-29 h2{font-size:48px!important}
+.xr-section-15 .xr-editorial-title h2{font-size:70px!important}.xr-section-16 .xr-16 header h2,.xr-section-129 .xr-129 header h2{font-size:90px!important}.xr-section-17 .xr-17 h2{font-size:63px!important}
+.xr-section-18 .xr-about-lower h2,.xr-section-19 .xr-master-wrap h2{font-size:47px!important}.xr-section-20 .xr-20 footer h2,.xr-section-136 .xr-136 header h2{font-size:46px!important}.xr-section-21 .xr-impact-copy h2{font-size:54px!important}
+.xr-section-22 .xr-22 h2,.xr-section-140 .xr-140 h2,.xr-section-27 .xr-27 h2,.xr-section-92 .xr-92 h2,.xr-section-143 .xr-143 h2,.xr-section-32 .xr-32 h2,.xr-section-76 .xr-76 h2,.xr-section-79 .xr-79 h2,.xr-section-87 .xr-photo-subscribe h2,.xr-section-89 .xr-89 h2,.xr-section-94 .xr-94 h2,.xr-section-95 .xr-95 h2,.xr-section-99 .xr-99 h2,.xr-section-100 .xr-100 h2,.xr-section-114 .xr-114 h2,.xr-section-122 .xr-122 h2,.xr-section-123 .xr-123 h2,.xr-section-150 .xr-150 h2{font-size:42px!important}
+.xr-section-26 .xr-26 h2,.xr-section-83 .xr-83 h2,.xr-section-135 .xr-135 h2{font-size:46px!important}.xr-section-28 .xr-28 h2,.xr-section-91 .xr-91 h2,.xr-section-104 .xr-104 h2{font-size:44px!important}
+.xr-section-30 .xr-30 h2,.xr-section-147 .xr-147 h2{font-size:39px!important}.xr-section-31 .xr-31 h2,.xr-section-86 .xr-86 h2{font-size:40px!important}.xr-section-33 .xr-33 h2{font-size:56px!important}
+.xr-section-88 .xr-88 h2{font-size:46px!important}.xr-section-88 .xr-number-faq details{font-size:22px!important}.xr-section-88 .xr-number-faq b{font-size:15px!important}
+.xr-section-96 .xr-96 h2,.xr-section-107 .xr-107 h2{font-size:38px!important}.xr-section-97 .xr-97 h2{font-size:45px!important}.xr-section-98 .xr-98 h2,.xr-section-148 .xr-148 h2{font-size:41px!important}
+.xr-section-101 .xr-101>h2,.xr-section-115 .xr-115 h2{font-size:50px!important}.xr-section-105 .xr-105 h2{font-size:36px!important}.xr-section-112 .xr-landscape-copy h2{font-size:54px!important}
+.xr-section-121 .xr-121 header>b{font-size:48px!important}.xr-section-121 .xr-121 header>b small{display:block!important;margin-top:8px!important;font-size:12px!important;line-height:1.2!important}
+.xr-section-132 .xr-order-faq summary{font-size:50px!important}.xr-section-132 .xr-order-faq p{font-size:15px!important}
+.xr-section-137 .xr-sustainable-copy h2{font-size:96px!important}
+@media(max-width:800px){.xr-section .xr h2,.xr-section-132 .xr-order-faq summary{font-size:30px!important}.xr-section-88 .xr-number-faq details{font-size:16px!important}}

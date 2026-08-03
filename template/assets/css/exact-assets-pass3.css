@@ -1,0 +1,48 @@
+.xr-section-11 .container-xl,.xr-section-14 .container-xl,.xr-section-86 .container-xl{max-width:none!important;padding:0!important}
+
+.xr-section-11 .xr-11-exact{min-height:auto!important;padding:0 9.35vw 1.3vw!important;background:#167c68!important;color:#fff!important}
+.xr-section-11 .xr-11-exact header{display:flex!important;align-items:flex-start!important;justify-content:space-between!important;gap:30px!important}
+.xr-section-11 .xr-11-exact header h2{margin:-.3vw 0 0!important;color:#fff!important;font-family:Manrope,sans-serif!important;font-size:3.3vw!important;font-weight:600!important;letter-spacing:-.055em!important;line-height:1.08!important}
+.xr-section-11 .xr-11-exact header>a{display:flex!important;align-items:center!important;gap:.55vw!important;margin-top:.28vw!important;color:#fff!important;font-size:.66vw!important;font-weight:700!important;text-decoration:none!important}
+.xr-section-11 .xr-11-exact header>a span{display:grid!important;width:1.25vw!important;height:1.25vw!important;place-items:center!important;border:1px solid rgba(255,255,255,.9)!important;border-radius:50%!important;font-size:.54vw!important}
+.xr-section-11 .xr11-exact-cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:1.85vw!important;margin-top:2.7vw!important}
+.xr-section-11 .xr11-exact-cards a{display:block!important;overflow:hidden!important;border-radius:1vw!important;text-decoration:none!important}
+.xr-section-11 .xr11-exact-cards img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;border-radius:0!important;box-shadow:none!important}
+.xr-section-11 .xr11-exact-cards a:focus-visible{outline:3px solid #fff!important;outline-offset:5px!important}
+
+.xr-section-14 .xr-14-exact{min-height:auto!important;padding:5.55vw 4.55vw 7.2vw!important;background:#fff!important;color:#111!important}
+.xr-section-14 .xr14-exact-cards{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;column-gap:1.35vw!important;row-gap:2.2vw!important;margin:0!important}
+.xr-section-14 .xr14-exact-cards a{display:block!important;margin:0!important;padding:0!important;text-decoration:none!important}
+.xr-section-14 .xr14-exact-cards img{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;border-radius:0!important;box-shadow:none!important}
+.xr-section-14 .xr14-exact-cards a:focus-visible{outline:3px solid #6d8e72!important;outline-offset:5px!important}
+
+.xr-section-86 .xr-86-exact{min-height:auto!important;padding:3.35vw 8.6vw 4.25vw!important;background:#fff!important;color:#111!important}
+.xr-section-86 .xr-86-exact header{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:30px!important}
+.xr-section-86 .xr-86-exact header small{display:block!important;margin:0 0 1.05vw!important;color:#111!important;font-size:.8vw!important;font-weight:700!important;line-height:1!important}
+.xr-section-86 .xr-86-exact header small i{display:inline-grid!important;width:1.13vw!important;height:1.13vw!important;margin-right:.26vw!important;place-items:center!important;border-radius:50%!important;background:#19b641!important;color:#fff!important;font-size:.54vw!important;vertical-align:-.1vw!important}
+.xr-section-86 .xr-86-exact header h2{margin:0!important;color:#111!important;font-family:Manrope,sans-serif!important;font-size:2.23vw!important;font-weight:600!important;letter-spacing:-.075em!important;line-height:1.16!important}
+.xr-section-86 .xr-86-exact header>a{display:flex!important;align-items:center!important;gap:.5vw!important;margin-top:1.7vw!important;padding:.7vw .62vw .7vw 1.15vw!important;border:0!important;border-radius:.32vw!important;background:#13ac35!important;color:#fff!important;font-size:.68vw!important;font-weight:800!important;line-height:1!important;text-decoration:none!important;box-shadow:0 .12vw .2vw rgba(0,0,0,.18)!important}
+.xr-section-86 .xr-86-exact header>a span{display:grid!important;width:1.25vw!important;height:1.25vw!important;place-items:center!important;border-radius:50%!important;background:#fff!important;color:#111!important;font-size:.56vw!important}
+.xr-section-86 .xr86-exact-cards{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:2.1vw!important;margin-top:5.65vw!important}
+.xr-section-86 .xr86-exact-cards button{display:block!important;width:100%!important;margin:0!important;padding:0!important;overflow:hidden!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;cursor:pointer!important}
+.xr-section-86 .xr86-exact-cards img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;border-radius:0!important;box-shadow:none!important}
+.xr-section-86 .xr86-exact-cards button:focus-visible{outline:3px solid #111!important;outline-offset:5px!important}
+
+@media(max-width:767px){
+  .xr-section-11 .xr-11-exact{padding:26px 22px 34px!important}
+  .xr-section-11 .xr-11-exact header h2{margin:0!important;font-size:27px!important}
+  .xr-section-11 .xr-11-exact header>a{gap:5px!important;margin-top:6px!important;font-size:8px!important;white-space:nowrap!important}
+  .xr-section-11 .xr-11-exact header>a span{width:15px!important;height:15px!important;font-size:7px!important}
+  .xr-section-11 .xr11-exact-cards{grid-template-columns:1fr!important;gap:18px!important;margin:28px auto 0!important;max-width:310px!important}
+  .xr-section-11 .xr11-exact-cards a{border-radius:10px!important}
+  .xr-section-14 .xr-14-exact{padding:34px 20px 44px!important}
+  .xr-section-14 .xr14-exact-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px 12px!important}
+  .xr-section-86 .xr-86-exact{padding:34px 22px 42px!important}
+  .xr-section-86 .xr-86-exact header{align-items:flex-start!important}
+  .xr-section-86 .xr-86-exact header small{margin-bottom:10px!important;font-size:9px!important}
+  .xr-section-86 .xr-86-exact header small i{width:14px!important;height:14px!important;margin-right:4px!important;font-size:7px!important;vertical-align:-2px!important}
+  .xr-section-86 .xr-86-exact header h2{font-size:26px!important;letter-spacing:-.055em!important}
+  .xr-section-86 .xr-86-exact header>a{gap:5px!important;margin-top:4px!important;padding:9px 8px 9px 12px!important;font-size:8px!important;white-space:nowrap!important}
+  .xr-section-86 .xr-86-exact header>a span{width:15px!important;height:15px!important;font-size:7px!important}
+  .xr-section-86 .xr86-exact-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin-top:34px!important}
+}

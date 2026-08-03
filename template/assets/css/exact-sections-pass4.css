@@ -1,0 +1,3 @@
+.xr-section-1 .xr-1 h2,.xr-section-130 .xr-130 h2{max-width:1100px;white-space:nowrap}
+.xr-section-16 .xr-16 header h2,.xr-section-129 .xr-129 header h2{white-space:nowrap}
+@media(max-width:800px){.xr-section-1 .xr-1 h2,.xr-section-130 .xr-130 h2,.xr-section-16 .xr-16 header h2,.xr-section-129 .xr-129 header h2{white-space:normal}}

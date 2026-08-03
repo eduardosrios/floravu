@@ -1,0 +1,19 @@
+@media(max-width:800px){
+  .xr-section .xr{width:100%;max-width:100%;overflow:hidden}
+  .xr-section .xr *{min-width:0}
+  .xr-section .xr header{flex-wrap:wrap}
+  .xr-section-13 .xr-benefit-strip{grid-template-columns:1fr;gap:22px}
+  .xr-section-17 .xr-17{grid-template-columns:1fr!important;grid-template-rows:auto}.xr-section-17 .xr-yellow-disc{width:220px;height:220px;left:50%;transform:translateX(-50%)}.xr-section-17 .xr-17 figure{height:280px}.xr-section-17 .xr-17 footer{grid-column:1;gap:20px;flex-wrap:wrap}
+  .xr-section-19 .xr-about-fragment{height:auto;grid-template-columns:1fr;padding:24px}.xr-section-19 .xr-about-fragment img{width:100%;height:220px}.xr-section-19 .xr-master-cards{grid-template-columns:1fr}
+  .xr-section-30 .xr-30,.xr-section-147 .xr-147{grid-template-columns:1fr!important}.xr-section-30 .xr-about-photo,.xr-section-147 .xr-about-photo{width:100%;height:360px}.xr-section-30 .xr-two-points,.xr-section-147 .xr-two-points{grid-template-columns:1fr}
+  .xr-section-33 .xr-power-grid{grid-template-columns:1fr}
+  .xr-section-76 .xr-tree-services{grid-template-columns:1fr}.xr-section-76 .xr-76 header nav{margin-left:0}
+  .xr-section-79 .xr-79{grid-template-columns:1fr!important}.xr-section-79 .xr-faq-stack{width:100%}
+  .xr-section-89 .xr-89>div{padding:34px 20px}.xr-section-89 .xr-89 form{display:grid;grid-template-columns:1fr;gap:10px}.xr-section-89 .xr-89 button{margin-left:0;min-height:42px}
+  .xr-section-95 .xr-benefit-mosaic{grid-template-columns:1fr;grid-template-rows:none}.xr-section-95 .xr-benefit-mosaic figure{grid-column:1;min-height:220px}
+  .xr-section-100 .xr-100{grid-template-columns:1fr!important}.xr-section-100 .xr-three-process{grid-template-columns:1fr;gap:24px}
+  .xr-section-101 .xr-101{grid-template-columns:1fr!important}.xr-section-101 .xr-green-services{grid-template-columns:1fr}
+  .xr-section-107 .xr-workshop-wheel{grid-template-columns:1fr!important;width:100%;max-width:100%}.xr-section-107 .xr-workshop-wheel>img{width:100%;height:auto}.xr-section-107 .xr-workshop-wheel article{text-align:left!important}
+  .xr-section-112 .xr-112{grid-template-columns:1fr!important}.xr-section-112 .xr-landscape-cards{grid-template-columns:1fr;width:100%}
+  .xr-section-135 .xr-about-metric-full{grid-template-columns:1fr}.xr-section-135 .xr-about-metric-full>b{margin:0;justify-self:center}.xr-section-135 .xr-about-metric-full section{flex-wrap:wrap}
+}

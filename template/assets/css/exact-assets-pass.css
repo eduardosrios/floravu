@@ -1,0 +1,4 @@
+.xr-season-grid article.xr-exact-card-asset:after{display:none}
+.xr-season-grid article.xr-exact-card-asset>img{height:100%;object-fit:fill}
+.xr-section-4 .xr-product-row .xr-plant-tile>img{object-fit:cover;object-position:center top;background:#f6f5f0}
+@media(max-width:800px){.xr-season-grid article.xr-exact-card-asset{height:auto;aspect-ratio:455/602}}

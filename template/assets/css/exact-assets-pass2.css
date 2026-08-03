@@ -1,0 +1,14 @@
+.xr-house-row article:has(.xr-exact-house-card){padding:0;background:transparent;overflow:hidden}
+.xr-exact-house-card{width:100%;height:100%!important;object-fit:fill!important}
+.xr-category-grid article:has(.xr-exact-category-card){padding:0;background:transparent;border-radius:10px}
+.xr-exact-category-card{position:static!important;width:100%!important;height:100%!important;object-fit:fill!important}
+.xr-1 h2,.xr-130 h2{font-size:82px}.xr-timeline-steps h3{font-size:22px}.xr-timeline-steps p{font-size:14px}.xr-timeline-steps b{font-size:16px}
+.xr-number-faq{max-width:1320px}.xr-number-faq details{font-size:18px}.xr-number-faq b{font-size:13px}
+.xr-order-faq{max-width:1320px}.xr-order-faq details{padding:38px 36px}.xr-order-faq summary{font-size:32px}.xr-order-faq p{font-size:14px}
+.xr-landscape-copy h2{font-size:54px}.xr-landscape-copy p{font-size:14px}.xr-landscape-cards h3{font-size:24px}.xr-landscape-cards p{font-size:13px}
+.xr-121 header>b small{display:block;margin-top:5px}.xr-121 header p{max-width:780px}.xr-case-grid>img{object-position:center}
+.xr-137{background-image:linear-gradient(rgba(17,53,35,.42),rgba(17,53,35,.42)),url(../images/reference-photos/greenhouse.jpg)}
+@media(max-width:800px){
+  .xr-exact-house-card,.xr-exact-category-card{height:auto!important;object-fit:contain!important}
+  .xr-1 h2,.xr-130 h2,.xr-order-faq summary,.xr-landscape-copy h2{font-size:30px}
+}
