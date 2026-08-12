@@ -12,6 +12,46 @@
     });
   }
 
+  var minimumFontTimer;
+
+  function hasDirectText(element) {
+    return Array.prototype.some.call(element.childNodes, function (node) {
+      return node.nodeType === 3 && node.textContent.trim();
+    });
+  }
+
+  function enforceMinimumTextSize() {
+    document.querySelectorAll('[data-template-min-font]').forEach(function (element) {
+      var originalValue = element.getAttribute('data-template-min-font-value');
+      var originalPriority = element.getAttribute('data-template-min-font-priority');
+      if (originalValue) element.style.setProperty('font-size', originalValue, originalPriority);
+      else element.style.removeProperty('font-size');
+      element.classList.remove('template-min-font-16');
+      element.removeAttribute('data-template-min-font');
+      element.removeAttribute('data-template-min-font-value');
+      element.removeAttribute('data-template-min-font-priority');
+    });
+
+    document.querySelectorAll('body *').forEach(function (element) {
+      if (element.matches('script, style, noscript, svg, path, i, [aria-hidden="true"]')) return;
+      if (!hasDirectText(element) && !element.matches('input, textarea, select, option')) return;
+
+      var style = window.getComputedStyle(element);
+      if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) === 0) return;
+      if (parseFloat(style.fontSize) >= 16) return;
+
+      element.setAttribute('data-template-min-font', 'true');
+      element.setAttribute('data-template-min-font-value', element.style.getPropertyValue('font-size'));
+      element.setAttribute('data-template-min-font-priority', element.style.getPropertyPriority('font-size'));
+      element.classList.add('template-min-font-16');
+      element.style.setProperty('font-size', '16px', 'important');
+    });
+  }
+
+  function scheduleMinimumTextSize() {
+    window.clearTimeout(minimumFontTimer);
+    minimumFontTimer = window.setTimeout(enforceMinimumTextSize, 80);
+  }
   function apply() {
     setSources('.xr-section-8 .xr-season-grid article>img', ['s8-areca.jpg', 's8-lily.jpg', 's8-monstera.jpg']);
     setSources('.xr-section-14 .xr-shop-eight article>img', Array.from({ length: 8 }, function (_, index) { return 's14-photo-' + (index + 1) + '.jpg'; }));
@@ -95,9 +135,14 @@
       }
       if (delayedSocial) delayedSocial.innerHTML = socialMarkup;
     }, 30);
+
+    scheduleMinimumTextSize();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleMinimumTextSize);
   }
 
   if (window.jQuery) window.jQuery(apply);
   else if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(apply, 0); });
   else setTimeout(apply, 0);
+
+  window.addEventListener('resize', scheduleMinimumTextSize);
 })();
