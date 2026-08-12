@@ -11,7 +11,7 @@
   };
   var stableVideoDisplayNumbers = { 3: 3, 5: 6, 7: 9 };
   function videoBlock(source, title, text, video) {
-    var media = '<video autoplay muted loop playsinline preload="metadata"><source src="' + video + '" type="video/mp4"></video>';
+    var media = '<img class="video-fallback-image" src="assets/images/reference-photos/gardenhero.jpg" alt="Garden motion study">';
     var body = '';
 
     if (source === 3) {
@@ -316,34 +316,103 @@
     $(window).on('scroll resize', syncTopbar); syncTopbar();
     $('.contact-form').on('submit', function (e) { e.preventDefault(); $(this).addClass('sent'); $(this).find('button').text('Request Sent'); });
 
-    // Circular-project carousel.
-    var heroTrack = document.querySelector('.hero-track');
-    function heroCardStep() {
-      var card = heroTrack && heroTrack.querySelector('.hero-project');
+    // Two synchronized circular-project carousels around a fixed control card.
+    var heroLeftViewport = document.querySelector('.hero-carousel-viewport-left');
+    var heroRightViewport = document.querySelector('.hero-carousel-viewport-right');
+    var heroLeftTrack = document.querySelector('.hero-track-left');
+    var heroRightTrack = document.querySelector('.hero-track-right');
+    var heroProjectCount = heroLeftTrack ? heroLeftTrack.children.length : 0;
+    var heroState = 0;
+    var heroLeftPosition = heroProjectCount;
+    var heroRightPosition = heroProjectCount;
+    var heroMoving = false;
+    var heroMoveTimer = 0;
+    var heroReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function prepareHeroTrack(track) {
+      if (!track || track.dataset.circularReady === 'true') return;
+      var originals = Array.prototype.slice.call(track.children);
+      var before = document.createDocumentFragment();
+      var after = document.createDocumentFragment();
+      originals.forEach(function (item) {
+        var clone = item.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        $(clone).find('a, button').attr('tabindex', '-1');
+        before.appendChild(clone);
+      });
+      originals.forEach(function (item) {
+        var clone = item.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        $(clone).find('a, button').attr('tabindex', '-1');
+        after.appendChild(clone);
+      });
+      track.insertBefore(before, track.firstChild);
+      track.appendChild(after);
+      track.dataset.circularReady = 'true';
+    }
+
+    function heroCardStep(viewport) {
+      var card = viewport && viewport.querySelector('.hero-project');
       return card ? card.getBoundingClientRect().width : 320;
     }
-    function updateHeroStatus() {
-      if (!heroTrack) return;
-      var projects = Array.prototype.slice.call(heroTrack.querySelectorAll('.hero-project'));
-      if (!projects.length) return;
-      var nearest = projects.reduce(function (best, item, index) {
-        var distance = Math.abs(item.offsetLeft - heroTrack.scrollLeft);
-        return distance < best.distance ? { index: index, distance: distance } : best;
-      }, { index: 0, distance: Infinity });
-      $('.hero-carousel-status').text(String(nearest.index + 1).padStart(2, '0') + ' / ' + String(projects.length).padStart(2, '0'));
+
+    function setHeroScroll(viewport, position, behavior) {
+      if (!viewport) return;
+      var target = position * heroCardStep(viewport);
+      if (behavior === 'auto') {
+        viewport.scrollLeft = target;
+        return;
+      }
+      viewport.scrollTo({ left: target, behavior: behavior });
     }
+
+    function updateHeroStatus() {
+      if (!heroProjectCount) return;
+      $('.hero-carousel-status').text(String(heroState + 1).padStart(2, '0') + ' / ' + String(heroProjectCount).padStart(2, '0'));
+    }
+
+    function positionHeroCarousels(behavior) {
+      setHeroScroll(heroLeftViewport, heroLeftPosition, behavior);
+      setHeroScroll(heroRightViewport, heroRightPosition, behavior);
+    }
+
+    function normalizeHeroCarousels() {
+      if (heroLeftPosition <= 0) heroLeftPosition += heroProjectCount;
+      if (heroLeftPosition >= heroProjectCount * 2) heroLeftPosition -= heroProjectCount;
+      if (heroRightPosition <= 0) heroRightPosition += heroProjectCount;
+      if (heroRightPosition >= heroProjectCount * 2) heroRightPosition -= heroProjectCount;
+      positionHeroCarousels('auto');
+      heroMoving = false;
+    }
+
+    function moveHeroCarousels(direction) {
+      if (!heroProjectCount || heroMoving) return;
+      heroMoving = true;
+      window.clearTimeout(heroMoveTimer);
+      heroState = (heroState + direction + heroProjectCount) % heroProjectCount;
+      heroLeftPosition -= direction;
+      heroRightPosition += direction;
+      updateHeroStatus();
+      positionHeroCarousels(heroReducedMotion ? 'auto' : 'smooth');
+      heroMoveTimer = window.setTimeout(normalizeHeroCarousels, heroReducedMotion ? 0 : 420);
+    }
+
+    prepareHeroTrack(heroLeftTrack);
+    prepareHeroTrack(heroRightTrack);
+    positionHeroCarousels('auto');
+    updateHeroStatus();
+
     $('.hero-carousel-next').on('click', function () {
-      if (!heroTrack) return;
-      var max = heroTrack.scrollWidth - heroTrack.clientWidth;
-      heroTrack.scrollTo({ left: heroTrack.scrollLeft >= max - 8 ? 0 : heroTrack.scrollLeft + heroCardStep(), behavior: 'smooth' });
+      moveHeroCarousels(1);
     });
     $('.hero-carousel-prev').on('click', function () {
-      if (!heroTrack) return;
-      var max = heroTrack.scrollWidth - heroTrack.clientWidth;
-      heroTrack.scrollTo({ left: heroTrack.scrollLeft <= 8 ? max : heroTrack.scrollLeft - heroCardStep(), behavior: 'smooth' });
+      moveHeroCarousels(-1);
     });
-    if (heroTrack) heroTrack.addEventListener('scroll', updateHeroStatus, { passive: true });
-    updateHeroStatus();
+    $(window).on('resize', function () {
+      window.clearTimeout(heroMoveTimer);
+      heroMoving = false;
+      positionHeroCarousels('auto');
+    });
     $('.hero-menu-toggle').on('click', function () {
       var open = !$('.hero-header').hasClass('menu-open');
       $('.hero-header').toggleClass('menu-open', open);

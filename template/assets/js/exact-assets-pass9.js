@@ -30,29 +30,6 @@
     ].join('');
   }
 
-  function applySection31() {
-    var target = host(31);
-    if (!target) return;
-    target.innerHTML = [
-      "<div class='xr xr-31 xr-31-exact'>",
-      "<header><h2>Your property’s safety &amp; satisfaction<br>are our top priorities tree removal.</h2><p>We combine expertise, advanced equipment, and strict safety standards to handle every tree<br>removal project—big or small. Trust us to protect your home, business, and landscape.</p></header>",
-      "<div class='xr31-cards'><img src='assets/images/exact/s31-card-1.jpg' alt='25 plus years of experience'><img src='assets/images/exact/s31-card-2.jpg' alt='1000 plus trees safely removed'></div>",
-      "<img class='xr31-man' src='assets/images/exact/s31-man.jpg' alt='Tree-care professional holding a basket of plants'>",
-      "</div>"
-    ].join('');
-  }
-
-  function applySection32() {
-    var target = host(32);
-    if (!target) return;
-    target.innerHTML = [
-      "<div class='xr xr-32 xr-32-exact'>",
-      "<h2>Your Trusted Process From<br>Start to a Perfect Finish</h2><img class='xr32-left' src='assets/images/exact/s32-left.jpg' alt='Gardener tending flowers'>",
-      "<div class='xr32-steps'><img class='s1' src='assets/images/exact/s32-step-1-partial.jpg' alt='Free consultation and assessment'><img class='s2' src='assets/images/exact/s32-step-2.jpg' alt='Customized lawn care plan'><img class='s3' src='assets/images/exact/s32-step-3.jpg' alt='Professional lawn service'><img class='s4' src='assets/images/exact/s32-step-4.jpg' alt='Ongoing care and follow-up'></div>",
-      "</div>"
-    ].join('');
-  }
-
   function workshopFeature(icon, label) {
     return "<article><span><i class='fa-solid fa-" + icon + "' aria-hidden='true'></i></span><strong>" + label + "</strong></article>";
   }
@@ -66,18 +43,6 @@
       "<div class='xr107-left'>" + workshopFeature('seedling', 'Edible &amp;<br>Sustainable<br>Gardening') + workshopFeature('flower', 'Floral<br>Design') + workshopFeature('warehouse', 'Greenhouse<br>Growing') + "</div>",
       "<img class='xr107-center' src='assets/images/exact/s107-center.jpg' alt='Garden workshop with pots and tools'>",
       "<div class='xr107-right'>" + workshopFeature('sun-plant-wilt', 'Landscape<br>Design') + workshopFeature('leaf', 'Seasonal<br>&amp; Specialized<br>Gardening') + workshopFeature('faucet-drip', 'Youth &amp; Junior<br>Gardening') + "</div>",
-      "</div>"
-    ].join('');
-  }
-
-  function applySection112() {
-    var target = host(112);
-    if (!target) return;
-    var labels = ['Maintenance', 'Garden Design', 'Planting', 'Fence Cleaning'];
-    target.innerHTML = [
-      "<div class='xr xr-112 xr-112-exact'>",
-      "<div class='xr112-copy'><small>What We Do</small><h2>We offer Landscape<br>Services.</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit nisi vitae mauris sagittis, quis fringilla velit varius. Nam vel eleifend elit. Donec convallis arcu mi, id egestas nunc vulputate at.</p><a href='#services'>VIEW ALL SERVICES</a></div>",
-      "<div class='xr112-cards'>" + labels.map(function (label, index) { return "<a href='#services' aria-label='View " + label + " service'><img src='assets/images/exact/s112-card-" + (index + 1) + ".jpg' alt='" + label + " service card'></a>"; }).join('') + "</div>",
       "</div>"
     ].join('');
   }
@@ -99,25 +64,14 @@
     target.innerHTML = [
       "<div class='xr xr-122 xr-122-exact'>",
       "<header><small>Our Services</small><h2>Your Lawn, Our Expertise</h2></header>",
-      "<img class='xr122-mower' src='assets/images/exact/s122-mower.jpg' alt='Professional mowing a lawn'><img class='xr122-badge' src='assets/images/exact/s122-badge.jpg' alt='Quality service badge'><img class='xr122-plant' src='assets/images/exact/s122-plant.jpg' alt='Decorative green plant'><img class='xr122-gardener' src='assets/images/exact/s122-gardener.jpg' alt='Gardener edging a flower bed'>",
+      "<img class='xr122-mower' src='assets/images/exact/s122-mower.jpg' alt='Professional mowing a lawn'><a class='xr122-badge' href='#services' aria-label='Explore our services'><span aria-hidden='true'><b style='--i:0'>S</b><b style='--i:1'>U</b><b style='--i:2'>C</b><b style='--i:3'>C</b><b style='--i:4'>E</b><b style='--i:5'>S</b><b style='--i:6'>S</b><b style='--i:7'>&nbsp;</b><b style='--i:8'>B</b><b style='--i:9'>R</b><b style='--i:10'>A</b><b style='--i:11'>N</b><b style='--i:12'>D</b><b style='--i:13'>&nbsp;</b><b style='--i:14'>W</b><b style='--i:15'>I</b><b style='--i:16'>T</b><b style='--i:17'>H</b><b style='--i:18'>&nbsp;</b><b style='--i:19'>D</b><b style='--i:20'>E</b><b style='--i:21'>M</b><b style='--i:22'>O</b></span><i class='fa-solid fa-play' aria-hidden='true'></i></a><img class='xr122-plant' src='assets/images/exact/s122-plant.jpg' alt='Decorative green plant'><img class='xr122-gardener' src='assets/images/exact/s122-gardener.jpg' alt='Gardener edging a flower bed'>",
       "<div class='xr122-list'><article class='featured'><h3>Patios &amp; Hardscaping</h3><p>Create functional and beautiful outdoor spaces with our Patios &amp; Hardscaping.</p><a href='#services'>Learn More <i class='fa-solid fa-arrow-right' aria-hidden='true'></i></a></article><article><h3>Lawn Care &amp; Maintenance</h3><p>A healthy, vibrant lawn is the foundation of any great landscape.</p><a href='#services'>Learn More <i class='fa-solid fa-arrow-right' aria-hidden='true'></i></a></article><article><h3>Hedge &amp; Topiary Shaping</h3><p>Elevate your garden’s elegance with precision hedge and topiary shaping.</p><a href='#services'>Learn More <i class='fa-solid fa-arrow-right' aria-hidden='true'></i></a></article><article><h3>Garden Edging &amp; Borders</h3><p>Define and highlight your garden areas with expert edging and borders.</p><a href='#services'>Learn More <i class='fa-solid fa-arrow-right' aria-hidden='true'></i></a></article></div>",
       "</div>"
     ].join('');
   }
 
-  function applySection135() {
-    var target = host(135);
-    if (!target) return;
-    target.innerHTML = [
-      "<div class='xr xr-135 xr-135-exact'>",
-      "<img src='assets/images/exact/s135-about-left.jpg' alt='Greenaura gardener with 25 plus years of experience'>",
-      "<div><small><i class='fa-solid fa-seedling' aria-hidden='true'></i> About Us</small><h2>About Greenaura</h2><p>At Greenaura, we are committed to environmentally sustainable gardening practices that promote biodiversity, conserve resources, and minimize our environmental footprint.</p><section><strong><i class='fa-solid fa-people-group' aria-hidden='true'></i> Customized<br>Solutions</strong><strong><i class='fa-solid fa-trowel' aria-hidden='true'></i> Customized<br>Solutions</strong></section><label>Professional Expertise <b>80%</b></label><i class='bar b80'></i><label>Client satisfaction <b>90%</b></label><i class='bar b90'></i></div>",
-      "</div>"
-    ].join('');
-  }
-
   function apply() {
-    applySection15(); applySection17(); applySection31(); applySection32(); applySection107(); applySection112(); applySection115(); applySection122(); applySection135();
+    applySection15(); applySection17(); applySection107(); applySection115(); applySection122();
   }
 
   if (window.jQuery) window.jQuery(apply);

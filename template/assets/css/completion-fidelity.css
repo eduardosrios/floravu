@@ -1,0 +1,427 @@
+/* Final source-measured geometry. Loaded after all legacy/exact passes. */
+@media (min-width: 801px) {
+  .xr-section-4 .xr-4 { min-height: 44.74vw !important; }
+  .xr-section-4 .xr-product-row .xr-plant-tile > img { height: 24.4vw !important; }
+
+  .xr-section-8 .xr-8 { min-height: 56.45vw !important; }
+  .xr-section-8 .xr-season-grid article { height: 44.4vw !important; }
+
+  .xr-section-14 .xr-14 { min-height: 71.18vw !important; }
+  .xr-section-14 .xr-shop-eight .xr-plant-tile > img { height: 21.55vw !important; }
+
+  .xr-section-27 .xr-27 { min-height: 56.97vw !important; }
+  .xr-section-92 .xr-92 { min-height: 48.95vw !important; }
+  .xr-section-143 .xr-143 { min-height: 46.84vw !important; }
+  .xr-section-27 .xr-green-products .xr-plant-tile > img,
+  .xr-section-92 .xr-green-products .xr-plant-tile > img,
+  .xr-section-143 .xr-green-products .xr-plant-tile > img { height: 25vw !important; }
+
+  .xr-section-30 .xr-30,
+  .xr-section-147 .xr-147 { min-height: 48.55vw !important; }
+  .xr-section-30 .xr-about-photo,
+  .xr-section-147 .xr-about-photo { height: 30.6vw !important; }
+
+  .xr-section-31 .container-xl,
+  .xr-section-32 .container-xl,
+  .xr-section-112 .container-xl,
+  .xr-section-115 .container-xl,
+  .xr-section-135 .container-xl { max-width: none !important; padding: 0 !important; }
+
+  .xr-section-31 .xr-31 { position: relative !important; display: block !important; min-height: 45.15vw !important; padding: 0 !important; background: #fff !important; }
+  .xr-section-31 .xr-priority-copy { position: static !important; }
+  .xr-section-31 .xr-priority-copy > h2 { position: absolute !important; top: 0 !important; left: 9.25vw !important; width: 50vw !important; margin: 0 !important; font-size: 3vw !important; line-height: 1.06 !important; }
+  .xr-section-31 .xr-priority-copy > p { position: absolute !important; top: 7.2vw !important; left: 9.25vw !important; width: 47vw !important; margin: 0 !important; font-size: .72vw !important; line-height: 1.5 !important; }
+  .xr-section-31 .xr-priority-copy > div { position: absolute !important; top: 15.85vw !important; left: 9.25vw !important; display: grid !important; width: 53.7vw !important; grid-template-columns: 26.1vw 26vw !important; gap: 1.6vw !important; }
+  .xr-section-31 .xr-priority-copy article { box-sizing: border-box !important; height: 23vw !important; padding: 2vw !important; }
+  .xr-section-31 .xr-priority-copy article > b { font-size: 2vw !important; }
+  .xr-section-31 .xr-priority-copy article span,
+  .xr-section-31 .xr-priority-copy article p { font-size: .72vw !important; line-height: 1.45 !important; }
+  .xr-section-31 .xr-priority-copy article img { width: 14vw !important; height: 14vw !important; right: .8vw !important; bottom: 0 !important; object-fit: contain !important; }
+  .xr-section-31 .xr-priority-photo { position: absolute !important; top: 0 !important; left: 64.95vw !important; width: 25.85vw !important; height: 41vw !important; border-radius: 0 !important; object-fit: contain !important; }
+
+  .xr-section-32 .xr-32 { position: relative !important; display: block !important; min-height: 54.15vw !important; padding: 0 !important; overflow: hidden !important; background: #06330d !important; }
+  .xr-section-32 .xr-32 > div:first-child > h2 { position: absolute !important; top: .8vw !important; left: 9.25vw !important; margin: 0 !important; font-size: 3.35vw !important; line-height: 1.08 !important; }
+  .xr-section-32 .xr-32 > div:first-child > img { position: absolute !important; top: 12.8vw !important; left: 9.25vw !important; width: 38.6vw !important; height: 32.4vw !important; margin: 0 !important; border-radius: .65vw !important; object-fit: cover !important; }
+  .xr-section-32 .xr-process-list { position: absolute !important; top: 0 !important; left: 50.8vw !important; display: grid !important; width: 40vw !important; gap: .8vw !important; }
+  .xr-section-32 .xr-process-list article { box-sizing: border-box !important; min-height: 8.3vw !important; grid-template-columns: 4vw 1fr !important; padding: 1.45vw !important; border: 0 !important; border-radius: .65vw !important; background: transparent !important; }
+  .xr-section-32 .xr-process-list article:nth-child(2) { min-height: 10.6vw !important; background: #fff !important; color: #18392e !important; }
+  .xr-section-32 .xr-process-list article:nth-child(2) p { color: #66746b !important; }
+  .xr-section-32 .xr-process-list b { font-size: 2.1vw !important; }
+  .xr-section-32 .xr-process-list h3 { font-size: 1.15vw !important; }
+  .xr-section-32 .xr-process-list p { font-size: .75vw !important; line-height: 1.5 !important; }
+
+  .xr-section-83 .xr-83 { min-height: 46.71vw !important; }
+  .xr-section-83 .xr-83 > img { height: 38.75vw !important; }
+
+  .xr-section-86 .xr-86 { min-height: 53.82vw !important; }
+  .xr-section-86 .xr-tool-shop { margin-top: 7.3vw !important; }
+
+  .xr-section-92 .xr-green-products .xr-plant-tile > img,
+  .xr-section-104 .xr-bestsellers article { min-height: 34.5vw !important; }
+
+  .xr-section-112 .xr-112 { position: relative !important; display: block !important; min-height: 73.35vw !important; padding: 0 !important; background: #fffaf3 !important; }
+  .xr-section-112 .xr-landscape-copy { position: absolute !important; top: 22.9vw !important; left: 6.15vw !important; width: 36.5vw !important; }
+  .xr-section-112 .xr-landscape-copy small { font-size: .72vw !important; }
+  .xr-section-112 .xr-landscape-copy h2 { margin: 1vw 0 0 !important; font-size: 3.45vw !important; line-height: 1.04 !important; }
+  .xr-section-112 .xr-landscape-copy p { margin: 2.1vw 0 0 !important; font-size: .8vw !important; line-height: 1.55 !important; }
+  .xr-section-112 .xr-landscape-copy a { display: inline-block !important; margin-top: 2.2vw !important; padding: 1.15vw 2.4vw !important; font-size: .7vw !important; }
+  .xr-section-112 .xr-landscape-cards { position: absolute !important; top: 8.45vw !important; left: 51.2vw !important; display: grid !important; width: auto !important; grid-template-columns: 20.35vw 20.35vw !important; gap: 2.45vw !important; }
+  .xr-section-112 .xr-landscape-cards article { box-sizing: border-box !important; min-height: 26vw !important; padding: 4vw 2.15vw !important; }
+  .xr-section-112 .xr-landscape-cards i { font-size: 2.9vw !important; }
+  .xr-section-112 .xr-landscape-cards h3 { font-size: 1.65vw !important; }
+  .xr-section-112 .xr-landscape-cards p { font-size: .86vw !important; line-height: 1.5 !important; }
+
+  .xr-section-114 .xr-pricing-row article { min-height: 34.5vw !important; padding: 4.2vw 2.6vw !important; }
+
+  .xr-section-115 .xr-115 { position: relative !important; display: block !important; min-height: 52.4vw !important; padding: 0 !important; background: #fff !important; }
+  .xr-section-115 .xr-115 > img { position: absolute !important; top: 4.9vw !important; left: 5.7vw !important; width: 43.4vw !important; height: 43vw !important; border-radius: 0 !important; object-fit: contain !important; }
+  .xr-section-115 .xr-115 > div { position: absolute !important; top: 4.9vw !important; left: 52.65vw !important; width: 39vw !important; }
+  .xr-section-115 .xr-115 > div > small { font-size: 1.65vw !important; }
+  .xr-section-115 .xr-115 > div > h2 { margin: .7vw 0 0 !important; font-size: 3.5vw !important; line-height: 1 !important; }
+  .xr-section-115 .xr-115 > div > p { margin: 1.9vw 0 0 !important; font-size: .8vw !important; line-height: 1.55 !important; }
+  .xr-section-115 .xr-115 > div > a { margin-top: 1.7vw !important; padding: .7vw 2.2vw !important; font-size: .72vw !important; }
+  .xr-section-115 .xr-design-icons { grid-template-columns: repeat(4, 1fr) !important; gap: 1vw !important; margin-top: 4.4vw !important; }
+  .xr-section-115 .xr-design-icons span { font-size: 1vw !important; line-height: 1.25 !important; }
+  .xr-section-115 .xr-design-icons i { width: 4.3vw !important; height: 4.3vw !important; font-size: 1.45vw !important; }
+
+  .xr-section-123 .xr-123 { min-height: 52.5vw !important; }
+  .xr-section-123 .xr-project-strip article { min-height: 29.5vw !important; }
+  .xr-section-123 .xr-project-strip article > img { height: 29.5vw !important; }
+
+  .xr-section-129 .xr-129 { min-height: 50.13vw !important; }
+  .xr-section-129 .xr-house-row article > img { height: 24.5vw !important; }
+
+  .xr-section-135 .xr-135 { min-height: 44.05vw !important; padding: 2.75vw 4.5vw 0 !important; background: #fff !important; }
+  .xr-section-135 .xr-about-metric-full { position: relative !important; display: grid !important; grid-template-columns: 36.95vw 1fr !important; gap: 10.45vw !important; align-items: start !important; }
+  .xr-section-135 .xr-about-metric-full > img { grid-column: 1 !important; width: 36.95vw !important; height: 36.95vw !important; border-radius: 0 !important; object-fit: contain !important; }
+  .xr-section-135 .xr-about-metric-full > b { position: absolute !important; top: 25.6vw !important; left: 28.2vw !important; z-index: 2 !important; display: grid !important; width: 9.1vw !important; height: 9.1vw !important; place-items: center !important; border-radius: 50% !important; background: #ffc824 !important; color: #18392e !important; font-size: 2.3vw !important; }
+  .xr-section-135 .xr-about-metric-full > b small { display: block !important; font-size: .62vw !important; }
+  .xr-section-135 .xr-about-metric-full > div { grid-column: 2 !important; padding-top: 1.55vw !important; }
+  .xr-section-135 .xr-about-metric-full > div > small { font-size: .68vw !important; }
+  .xr-section-135 .xr-about-metric-full h2 { margin: 1.25vw 0 0 !important; font-size: 3.05vw !important; line-height: 1.05 !important; }
+  .xr-section-135 .xr-about-metric-full p { margin: 1.45vw 0 0 !important; font-size: .7vw !important; line-height: 1.55 !important; }
+  .xr-section-135 .xr-about-metric-full section { gap: 2vw !important; margin-top: 2.1vw !important; }
+  .xr-section-135 .xr-about-metric-full strong { font-size: 1vw !important; }
+  .xr-section-135 .xr-about-metric-full > div > span { margin-top: 2vw !important; font-size: .7vw !important; }
+
+  .xr-section-136 .xr-136 { min-height: 59.08vw !important; }
+  .xr-section-136 .xr-136 > header,
+  .xr-section-136 .xr-master-cards .xr-service-copy { min-height: 14vw !important; }
+
+  .xr-section-150 .xr-150 > header { transform: translateY(2vw) !important; }
+  .xr-section-150 .xr-team-carousel article { min-height: 30.2vw !important; }
+  .xr-section-150 .xr-team-carousel article:nth-of-type(2) { position: relative !important; }
+  .xr-section-150 .xr-social-stack { position: absolute !important; top: 2vw !important; right: .65vw !important; z-index: 2 !important; }
+
+  /* Second measured comparison refinements. */
+  .xr-section-32 .xr-32 > div:first-child > img { height: 29.3vw !important; }
+
+  .xr-section-83 .xr-83 > div { transform: translateY(-3vw) !important; }
+  .xr-section-83 .xr-about-cards article { min-height: 7vw !important; }
+
+  .xr-section-86 .xr-tool-shop { max-width: 82vw !important; margin: 7.3vw auto 0 !important; }
+  .xr-section-86 .xr-tool-shop article { min-height: 31vw !important; }
+  .xr-section-86 .xr-tool-shop img { height: 13vw !important; }
+
+  .xr-section-92 .xr-green-products .xr-plant-tile > img,
+  .xr-section-143 .xr-green-products .xr-plant-tile > img { height: 27vw !important; }
+  .xr-section-27 .xr-27 header nav button:first-child,
+  .xr-section-92 .xr-92 header nav button:first-child,
+  .xr-section-143 .xr-143 header nav button:first-child { background: #fff !important; color: #438c71 !important; }
+
+  .xr-section-104 .xr-bestsellers { max-width: 82vw !important; margin: 10.5vw auto 0 !important; }
+  .xr-section-104 .xr-bestsellers img { height: 26.5vw !important; }
+  .xr-section-104 .xr-bestsellers article { min-height: 39.5vw !important; }
+
+  .xr-section-114 .xr-pricing-row { margin-top: 4.5vw !important; }
+  .xr-section-114 .xr-pricing-row article { min-height: 28.5vw !important; padding: 3.2vw 2.6vw !important; }
+  .xr-section-114 .xr-pricing-row article.featured { transform: none !important; }
+
+  .xr-section-123 .xr-123 > header,
+  .xr-section-123 .xr-project-strip { transform: translateY(8vw) !important; }
+
+  .xr-section-136 .xr-136 > header { transform: translateY(4.8vw) !important; }
+  .xr-section-136 .xr-master-cards,
+  .xr-section-136 .xr-136 > p,
+  .xr-section-136 .xr-136 > footer { transform: translateY(3.3vw) !important; }
+  .xr-section-136 .xr-master-cards { margin-top: 7vw !important; }
+  .xr-section-136 .xr-master-cards .xr-service-tile > img { height: 13vw !important; }
+  .xr-section-136 .xr-master-cards .xr-service-copy { min-height: 15.5vw !important; }
+
+  .xr-section-150 .xr-150 > header { transform: translateY(3.5vw) !important; }
+  .xr-section-150 .xr-team-carousel { max-width: 86vw !important; gap: 1.8vw !important; margin-left: auto !important; margin-right: auto !important; transform: translateY(6.5vw) !important; }
+  .xr-section-150 .xr-team-carousel img { height: 24.4vw !important; }
+  .xr-section-150 .xr-team-carousel article { min-height: 28.5vw !important; }
+
+  /* Third measured comparison refinements. */
+  .xr-section-83 .xr-83 > img { height: 36.5vw !important; }
+  .xr-section-83 .xr-about-cards article { min-height: 8.5vw !important; border: 1px solid #efeee8 !important; }
+
+  .xr-section-86 .xr-tool-shop img { height: 15vw !important; }
+
+  .xr-section-92 .xr-green-products,
+  .xr-section-143 .xr-green-products { transform: translateY(3.3vw) !important; }
+  .xr-section-92 .xr-green-products .xr-plant-tile > img,
+  .xr-section-143 .xr-green-products .xr-plant-tile > img { height: 16.5vw !important; }
+
+  .xr-section-104 .xr-bestsellers { margin-top: 7.9vw !important; }
+  .xr-section-104 .xr-bestsellers img { height: 24.1vw !important; }
+  .xr-section-104 .xr-bestsellers h3 { font-size: 1.3vw !important; line-height: 1.25 !important; }
+  .xr-section-104 .xr-bestsellers p { font-size: .95vw !important; line-height: 1.45 !important; }
+  .xr-section-104 .xr-bestsellers button { font-size: .8vw !important; padding: .65vw .9vw !important; }
+
+  .xr-section-114 .xr-pricing-row { margin-top: 9.1vw !important; }
+  .xr-section-114 .xr-pricing-row article { min-height: 34.5vw !important; padding: 3.2vw 2.6vw !important; }
+
+  .xr-section-123 .xr-123 > header { transform: translateY(2.2vw) !important; }
+  .xr-section-123 .xr-project-strip { transform: translateY(4vw) !important; }
+
+  .xr-section-135 .xr-about-metric-full > img { object-fit: fill !important; }
+  .xr-section-135 .xr-about-metric-full > b { top: 23.8vw !important; left: 22.8vw !important; width: 12.8vw !important; height: 12.8vw !important; box-shadow: inset 0 0 0 12.8vw #ffc824 !important; text-align: center !important; }
+
+  .xr-section-136 .xr-master-cards { margin-top: 1.56vw !important; transform: translateY(2vw) !important; }
+  .xr-section-136 .xr-master-cards .xr-service-copy { min-height: 21vw !important; }
+  .xr-section-136 .xr-136 > p,
+  .xr-section-136 .xr-136 > footer { transform: none !important; }
+
+  /* Settled-state fidelity corrections. */
+  .xr-section-83 .xr-83 > img { height: 38.5vw !important; }
+
+  .xr-section-92 .xr-green-products .xr-plant-tile > img,
+  .xr-section-143 .xr-green-products .xr-plant-tile > img { min-height: 0 !important; }
+
+  .xr-section-104 .xr-bestsellers h3 { margin-top: .3vw !important; }
+  .xr-section-104 .xr-bestsellers p { margin-top: .5vw !important; }
+  .xr-section-104 .xr-bestsellers button { margin-top: 1vw !important; }
+  .xr-section-104 .xr-rating { display: inline-flex !important; gap: .08vw !important; margin-left: .4vw !important; color: #c6d36b !important; font-size: .55vw !important; }
+
+  .xr-section-123 .xr-123 > header { transform: none !important; }
+
+  .xr-section-135 .xr-about-metric-full > img { border-radius: 50% !important; }
+  .xr-section-135 .xr-about-metric-full > b { opacity: 1 !important; animation: none !important; transition: none !important; }
+
+  /* Final desktop alignment refinements. */
+  .xr-section-92 .xr-green-products .xr-plant-tile > img,
+  .xr-section-143 .xr-green-products .xr-plant-tile > img { height: 27vw !important; }
+
+  .xr-section-104 .xr-bestsellers p { margin-top: 3vw !important; }
+  .xr-section-104 .xr-bestsellers button { margin-top: 1.3vw !important; }
+
+  .xr-section-123 .xr-123 > header { transform: translateY(1.3vw) !important; }
+  .xr-section-123 .xr-123 > header h2 { transform: translateY(1.7vw) !important; }
+
+  .xr-section-135 .xr-about-metric-full { max-width: none !important; margin: 0 !important; }
+  .xr-section-135 .xr-about-metric-full > b { left: 25.3vw !important; }
+
+  .xr-section-136 .xr-master-cards { transform: translateY(3.1vw) !important; }
+  .xr-section-136 .xr-master-cards .xr-service-copy { min-height: 15.3vw !important; }
+
+  /* Final three-section desktop closure. */
+  .xr-section-92 .xr-green-products .xr-plant-tile > img,
+  .xr-section-143 .xr-green-products .xr-plant-tile > img { height: 24.2vw !important; }
+
+  .xr-section-135 .xr-about-metric-full > b { top: 20.8vw !important; width: 13.5vw !important; height: 13.5vw !important; }
+  .xr-section-135 .xr-about-metric-full > div { width: 39vw !important; }
+
+  .xr-section-135 .xr-about-metric-full > img { object-fit: cover !important; object-position: center top !important; }
+
+  /* Full settled-state audit closure pack. */
+  .xr-section-18 .xr-18 { min-height: 57.1vw !important; padding-top: 5vw !important; }
+  .xr-section-18 .xr-three-services { max-width: 90vw !important; }
+  .xr-section-18 .xr-three-services .xr-service-tile > img { height: 12.5vw !important; }
+  .xr-section-18 .xr-three-services .xr-service-copy { min-height: 8.9vw !important; }
+  .xr-section-18 .xr-about-lower { width: 91vw !important; max-width: none !important; grid-template-columns: 40vw 1fr !important; gap: 14.5vw !important; margin-top: 9.1vw !important; }
+  .xr-section-18 .xr-about-lower > img { width: 40vw !important; height: 40vw !important; object-fit: cover !important; border-radius: 50% !important; }
+
+  .xr-section-24 .xr-24 { position: relative !important; min-height: 38.8vw !important; padding: 2.4vw 0 0 !important; overflow: hidden !important; background: #fffaf5 !important; }
+  .xr-section-24 .xr-24 > header,
+  .xr-section-24 .xr-offer-row { position: relative !important; z-index: 2 !important; }
+  .xr-section-24 .xr-offer-row { max-width: 70vw !important; margin: 4.55vw auto 0 !important; }
+
+  .xr-section-28 .xr-28-coded { position: relative !important; min-height: 35.33vw !important; padding: 0 !important; overflow: hidden !important; background: #fff !important; color: #45691a !important; }
+  .xr-section-28 .xr28-side-left,
+  .xr-section-28 .xr28-side-right { position: absolute !important; top: 0 !important; width: 9.38vw !important; height: 100% !important; border-radius: 0 !important; object-fit: cover !important; }
+  .xr-section-28 .xr28-side-left { left: 0 !important; }
+  .xr-section-28 .xr28-side-right { right: 0 !important; }
+  .xr-section-28 .xr28-label { position: absolute !important; top: 3vw !important; left: 13.8vw !important; color: #777 !important; font-size: .62vw !important; letter-spacing: .25em !important; }
+  .xr-section-28 .xr-28-coded > h2 { position: absolute !important; top: 2.2vw !important; left: 34.5vw !important; margin: 0 !important; color: #4e711c !important; font-family: Georgia, serif !important; font-size: 2.95vw !important; font-weight: 500 !important; line-height: 1 !important; }
+  .xr-section-28 .xr28-copy-a,
+  .xr-section-28 .xr28-copy-b { position: absolute !important; top: 8.65vw !important; width: 18vw !important; margin: 0 !important; color: #666 !important; font-size: .68vw !important; line-height: 1.5 !important; }
+  .xr-section-28 .xr28-copy-a { left: 33.2vw !important; }
+  .xr-section-28 .xr28-copy-b { left: 51.9vw !important; }
+  .xr-section-28 .xr28-arrow { position: absolute !important; top: 2.75vw !important; right: 13.8vw !important; color: #4e711c !important; font-size: 2.1vw !important; }
+  .xr-section-28 .xr28-left-card,
+  .xr-section-28 .xr28-middle-photo,
+  .xr-section-28 .xr28-green-card,
+  .xr-section-28 .xr28-right-card { position: absolute !important; margin: 0 !important; overflow: visible !important; }
+  .xr-section-28 .xr28-left-card { top: 11.55vw !important; left: 13.75vw !important; width: 13.75vw !important; }
+  .xr-section-28 .xr28-middle-photo { top: 18.3vw !important; left: 29.55vw !important; width: 19.05vw !important; }
+  .xr-section-28 .xr28-green-card { top: 16.2vw !important; left: 51.05vw !important; width: 17.7vw !important; height: 13.2vw !important; padding: 2.2vw 1.3vw !important; border-radius: .65vw !important; background: #356e16 !important; color: #fff !important; }
+  .xr-section-28 .xr28-right-card { top: 11.55vw !important; left: 72vw !important; width: 12.88vw !important; }
+  .xr-section-28 .xr28-left-card b,
+  .xr-section-28 .xr28-right-card b { display: block !important; color: #4e711c !important; font-size: 2.15vw !important; line-height: 1 !important; }
+  .xr-section-28 .xr28-left-card span,
+  .xr-section-28 .xr28-right-card span,
+  .xr-section-28 .xr28-green-card span { display: block !important; margin-top: .45vw !important; font-size: .65vw !important; }
+  .xr-section-28 .xr28-green-card b { display: block !important; font-size: 2.4vw !important; line-height: 1 !important; }
+  .xr-section-28 .xr28-left-card img { width: 100% !important; height: 10.4vw !important; margin-top: 1.1vw !important; border-radius: .65vw !important; object-fit: cover !important; }
+  .xr-section-28 .xr28-middle-photo img { width: 100% !important; height: 10.3vw !important; border-radius: .65vw !important; object-fit: cover !important; }
+  .xr-section-28 .xr28-green-card img { position: absolute !important; right: 0 !important; bottom: 0 !important; width: 8.5vw !important; height: 8.5vw !important; object-fit: contain !important; }
+  .xr-section-28 .xr28-right-card img { width: 100% !important; height: 11.3vw !important; margin-top: 1vw !important; border-radius: .65vw !important; object-fit: cover !important; }
+
+  .xr-section-29 .xr-29 { position: relative !important; display: block !important; min-height: 54.35vw !important; padding: 0 !important; overflow: hidden !important; }
+  .xr-section-29 .xr-service-intro { position: absolute !important; top: 4.8vw !important; left: 13.6vw !important; width: 18vw !important; }
+  .xr-section-29 .xr-service-intro > small { position: absolute !important; top: 43.5vw !important; left: 0 !important; }
+  .xr-section-29 .xr-service-intro h2 { margin: 0 !important; font-size: 2.4vw !important; }
+  .xr-section-29 .xr-service-intro p { margin-top: 2.2vw !important; font-size: .72vw !important; line-height: 1.5 !important; }
+  .xr-section-29 .xr-service-focus { position: absolute !important; top: 10.9vw !important; left: 32vw !important; width: 24vw !important; height: 36.3vw !important; border-radius: .55vw !important; object-fit: cover !important; }
+  .xr-section-29 .xr-accordion-list { position: absolute !important; top: 10.9vw !important; left: 58vw !important; width: 28vw !important; }
+  .xr-section-29 .xr-accordion-list > a { box-sizing: border-box !important; min-height: 5.1vw !important; display: grid !important; align-content: center !important; padding: .7vw 1vw !important; }
+  .xr-section-29 .xr-accordion-list > a.active { min-height: 11vw !important; }
+  .xr-section-29 .xr-view-all { position: absolute !important; top: 4.8vw !important; right: 14vw !important; }
+
+  .xr-section-91 .xr-91 > header { transform: translateY(2.8vw) !important; }
+  .xr-section-91 .xr-category-grid { transform: translateY(7vw) !important; }
+
+  .xr-section-95 .xr-95 > header { transform: translateY(4.6vw) !important; }
+  .xr-section-95 .xr-benefit-mosaic { max-width: 85vw !important; grid-template-rows: 15vw 15vw !important; transform: translateY(7.2vw) !important; }
+
+  .xr-section-98 .xr-98 > header,
+  .xr-section-148 .xr-148 > header { transform: translate(5.7vw, 4vw) !important; }
+  .xr-section-98 .xr-lawn-slider,
+  .xr-section-148 .xr-lawn-slider { transform: translate(6vw, 8vw) !important; }
+  .xr-section-98 .xr-lawn-slider article,
+  .xr-section-148 .xr-lawn-slider article { min-height: 41.5vw !important; }
+
+  .xr-section-134 .xr-134 { min-height: 30.66vw !important; }
+  .xr-section-134 .xr-three-services { max-width: 90.5vw !important; transform: translateY(2.2vw) !important; }
+  .xr-section-134 .xr-three-services .xr-service-tile > img { height: 11vw !important; }
+  .xr-section-134 .xr-three-services .xr-service-copy { min-height: 11.5vw !important; }
+}
+@media (max-width: 800px) {
+  .xr-section-24 .xr24-decor-left,
+  .xr-section-24 .xr24-decor-right,
+  .xr-section-24 .xr24-decor-soil { display: none !important; }
+  .xr-section-28 .xr-28-coded { display: grid !important; gap: 18px !important; padding: 42px 22px !important; }
+  .xr-section-28 .xr28-side-left,
+  .xr-section-28 .xr28-side-right { display: none !important; }
+  .xr-section-28 .xr28-label,
+  .xr-section-28 .xr-28-coded > h2,
+  .xr-section-28 .xr28-copy-a,
+  .xr-section-28 .xr28-copy-b,
+  .xr-section-28 .xr28-arrow,
+  .xr-section-28 .xr28-left-card,
+  .xr-section-28 .xr28-middle-photo,
+  .xr-section-28 .xr28-green-card,
+  .xr-section-28 .xr28-right-card { position: static !important; width: 100% !important; height: auto !important; margin: 0 !important; }
+  .xr-section-28 .xr-28-coded > h2 { font-size: 31px !important; }
+  .xr-section-28 .xr28-copy-a,
+  .xr-section-28 .xr28-copy-b { font-size: 11px !important; }
+  .xr-section-28 .xr28-left-card img,
+  .xr-section-28 .xr28-middle-photo img,
+  .xr-section-28 .xr28-right-card img { width: 100% !important; height: 210px !important; object-fit: cover !important; }
+  .xr-section-28 .xr28-green-card { min-height: 220px !important; padding: 28px !important; }
+  .xr-section-28 .xr28-green-card img { width: 150px !important; height: 150px !important; }
+}
+@media (min-width: 801px) {
+  /* Final evidence-based alignment after fresh 1600px side-by-side review. */
+  .xr-section-18 .xr-18 { min-height: 43.4vw !important; }
+  .xr-section-18 .xr-about-lower { grid-template-columns: 31vw 1fr !important; gap: 15vw !important; margin-top: 4.8vw !important; }
+  .xr-section-18 .xr-about-lower > img { width: 31vw !important; height: 31vw !important; }
+
+  .xr-section-24 .xr-24 > header h2 { font-size: 3vw !important; }
+  .xr-section-24 .xr-24 > header p { max-width: 40vw !important; font-size: .72vw !important; }
+  .xr-section-24 .xr-offer-row { max-width: 68vw !important; margin-top: 3.1vw !important; gap: 2vw !important; }
+  .xr-section-24 .xr-offer-row article > i { box-sizing: border-box !important; display: grid !important; place-items: center !important; width: 8.8vw !important; height: 8.8vw !important; margin: 0 auto 1.35vw !important; border-radius: 50% !important; background: #fff !important; box-shadow: 0 .75vw 1.8vw rgba(32,48,24,.09) !important; font-size: 2.6vw !important; }
+  .xr-section-24 .xr-offer-row article > b { left: .2vw !important; top: -.55vw !important; width: 3.15vw !important; height: 3.15vw !important; font-size: .82vw !important; z-index: 3 !important; }
+  .xr-section-24 .xr-offer-row h3 { margin: 0 0 .7vw !important; font-size: 1.05vw !important; }
+  .xr-section-24 .xr-offer-row p { min-height: 2.9vw !important; margin: 0 auto .6vw !important; max-width: 12.5vw !important; font-size: .65vw !important; line-height: 1.45 !important; }
+  .xr-section-24 .xr-offer-row a { font-size: .55vw !important; }
+
+  .xr-section-28 .xr28-green-card { width: 18.3vw !important; height: 14.2vw !important; }
+
+  .xr-section-91 .xr-category-grid { transform: translateY(6.35vw) !important; }
+
+  .xr-section-95 .xr-95 { min-height: 44.5vw !important; }
+  .xr-section-95 .xr-95 > header { transform: translateY(1.8vw) !important; }
+  .xr-section-95 .xr-benefit-mosaic { grid-template-rows: 15.8vw 15.8vw !important; transform: translateY(6.7vw) !important; }
+  .xr-section-95 .xr-benefit-mosaic article.dark { grid-column: 1 / 3 !important; background: linear-gradient(90deg, rgba(4,49,20,.97) 0%, rgba(4,49,20,.88) 43%, rgba(4,49,20,.12) 100%), url("../images/reference-photos/path.jpg") center/cover no-repeat !important; }
+  .xr-section-95 .xr-benefit-mosaic > figure { display: none !important; }
+
+  .xr-section-98 .xr-98 > header nav,
+  .xr-section-148 .xr-148 > header nav { right: 10vw !important; }
+  .xr-section-98 .xr-98 > header nav button:first-child,
+  .xr-section-148 .xr-148 > header nav button:first-child { background: #fff !important; color: #486a55 !important; box-shadow: 0 .3vw 1vw rgba(34,74,48,.08) !important; }
+  .xr-section-98 .xr-lawn-slider,
+  .xr-section-148 .xr-lawn-slider { transform: translate(4.2vw, 7.6vw) !important; }
+
+  .xr-section-134 .xr-three-services .xr-service-copy { min-height: 7.4vw !important; padding: 4.45vw 2vw 1vw !important; overflow: visible !important; }
+  .xr-section-134 .xr-three-services .xr-service-copy > i { top: -2.15vw !important; left: 1.7vw !important; width: 4.3vw !important; height: 4.3vw !important; font-size: 1.75vw !important; }
+  .xr-section-134 .xr-three-services .xr-service-copy h3 { font-size: 1.4vw !important; line-height: 1.1 !important; }
+  .xr-section-134 .xr-three-services .xr-service-copy p { font-size: .7vw !important; }
+  .xr-section-134 .xr-three-services .xr-service-copy::after { content: "\f061" !important; position: absolute !important; right: 1.5vw !important; bottom: 1.3vw !important; display: grid !important; place-items: center !important; width: 2.5vw !important; height: 2.5vw !important; background: #f7c70a !important; color: #31573b !important; font: 900 1vw/1 "Font Awesome 6 Free" !important; }
+}
+
+@media (min-width: 801px) {
+  .xr-section-24 .xr-24 > header { transform: translateY(-2vw) !important; }
+  .xr-section-24 .xr-offer-row { transform: translateY(2vw) !important; }
+
+  .xr-section-95 .xr-95 > header { transform: translateY(4.2vw) !important; }
+
+  .xr-section-98 .xr-98 > header nav,
+  .xr-section-148 .xr-148 > header nav { right: 12.5vw !important; }
+
+  .xr-section-134 .xr-three-services { max-width: 89.5vw !important; }
+  .xr-section-134 .xr-three-services .xr-service-copy { padding-top: 5.05vw !important; }
+  .xr-section-134 .xr-three-services .xr-service-copy > i { width: 5vw !important; height: 5vw !important; top: -2.5vw !important; }
+  .xr-section-134 .xr-three-services .xr-service-copy::after { right: 2.4vw !important; }
+}
+
+@media (min-width: 801px) {
+  .xr-section-24 .xr-offer-row article > i { margin-bottom: 2.5vw !important; }
+  .xr-section-24 .xr-offer-row p { min-height: 5vw !important; max-width: 10.5vw !important; }
+}
+
+@media (min-width: 801px) {
+  .xr-section-24 .xr-offer-row p { min-height: 7.1vw !important; }
+}
+
+.video-shell > .video-fallback-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 801px) {
+  .xr-section-98 .xr-98 > header,
+  .xr-section-148 .xr-148 > header { width: calc(100% - 5.7vw) !important; box-sizing: border-box !important; }
+}
+
+@media (min-width: 801px) {
+  .xr-section-98 .xr-98 > header nav,
+  .xr-section-148 .xr-148 > header nav { right: 6.8vw !important; }
+}
+
+@media (min-width: 801px) {
+  .xr-section-24 .xr-offer-row article::before {
+    content: "";
+    position: absolute;
+    top: -.8vw;
+    right: .9vw;
+    width: 6.4vw;
+    height: 9.8vw;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+  .xr-section-24 .xr-offer-row article:nth-child(1)::before { background-image: url("../images/semantic/s24-botanical-1.png"); }
+  .xr-section-24 .xr-offer-row article:nth-child(2)::before { background-image: url("../images/semantic/s24-botanical-2.png"); }
+  .xr-section-24 .xr-offer-row article:nth-child(3)::before { background-image: url("../images/semantic/s24-botanical-3.png"); }
+  .xr-section-24 .xr-offer-row article:nth-child(4)::before { background-image: url("../images/semantic/s24-botanical-4.png"); }
+  .xr-section-24 .xr-offer-row article > i { position: relative !important; z-index: 2 !important; }
+}
+
+@media (min-width: 801px) {
+  .xr-section-24 .xr-offer-row article::before { top: -1.5vw; right: -1.3vw; width: 9.5vw; height: 11vw; }
+}
+
+@media (min-width: 801px) {
+  .xr-section-24 .xr-offer-row article > b { left: 2.8vw !important; }
+}
