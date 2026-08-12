@@ -15,7 +15,8 @@
     var body = '';
 
     if (source === 3) {
-      body = '<div class="video-reference-grid"><article class="wide"><h2>Home Garden</h2><p>Private outdoor rooms shaped around real life.</p></article><article><h3>Plant Selection</h3><p>Regional plants with lasting seasonal structure.</p></article><article><h3>Hardscaping</h3><p>Paths and patios built for daily use.</p></article><article><h3>Public Garden</h3><p>Durable landscapes for shared spaces.</p></article></div>';
+      media = '';
+      body = '<div class="video-reference-grid" aria-label="Landscape services"><article class="wide is-active" tabindex="0" style="--panel-image:url(&quot;../images/reference-photos/path.jpg&quot;)"><div class="video-panel-tags"><span>Home</span><span>Garden</span><span>Landscape Design</span><span>Expert</span></div><span class="video-panel-arrow" aria-hidden="true">↗</span><div class="video-panel-copy"><h2>Home<br>Garden</h2><p>Crafting the perfect garden space for your home. Whether indoor or outdoor, we create it ready for your greenery needs.</p></div></article><article tabindex="0" style="--panel-image:url(&quot;../images/reference-photos/work.jpg&quot;)"><span class="video-panel-arrow" aria-hidden="true">↗</span><div class="video-panel-copy"><h3>Plant<br>Selection</h3><p>Hand-picked greenery for your oasis.</p></div></article><article tabindex="0" style="--panel-image:url(&quot;../images/reference-photos/greenhouse.jpg&quot;)"><span class="video-panel-arrow" aria-hidden="true">↗</span><div class="video-panel-copy"><h3>Hard-<br>scaping</h3><p>Adding structure to your garden landscape.</p></div></article><article tabindex="0" style="--panel-image:url(&quot;../images/reference-photos/garden.jpg&quot;)"><span class="video-panel-arrow" aria-hidden="true">↗</span><div class="video-panel-copy"><h3>Public<br>Garden</h3><p>Expert design for durable shared green city spaces.</p></div></article></div>';
     } else if (source === 7) {
       body = '<div class="video-seasonal-copy"><p class="eyebrow light">Seasonal best collections</p><h2>Living gardens through every season</h2><div><article><h3>Indoor calm</h3><p>Architectural foliage.</p></article><article><h3>Fresh growth</h3><p>Season-led planting.</p></article><article><h3>Garden care</h3><p>Practical upkeep.</p></article></div></div>';
     } else {
@@ -428,13 +429,15 @@
     $(document).on('click', '.media-close, .media-backdrop', closeModal);
     $(document).on('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
     $(document).on('click', '.gallery-grid img, .three-cards img, .outline-cards img, .seasonal-cards img', function () { openModal('<img src="' + this.currentSrc + '" alt="' + (this.alt || 'Garden image') + '">'); });
-    $(document).on('click', '.video-shell', function (e) { if ($(e.target).is('a')) return; var src = $(this).find('video source').attr('src'); openModal('<video autoplay controls playsinline src="' + src + '"></video>'); });
+    $(document).on('mouseenter focusin', '.video-reference-grid article', function () { $(this).addClass('is-active').siblings().removeClass('is-active'); });
+    $(document).on('mouseleave', '.video-reference-grid', function () { $(this).children().removeClass('is-active').first().addClass('is-active'); });
+    $(document).on('click', '.video-shell', function (e) { if ($(this).closest('.video-reference-3').length || $(e.target).is('a')) return; var src = $(this).find('video source').attr('src'); openModal('<video autoplay controls playsinline src="' + src + '"></video>'); });
 
     $('.gallery-grid img').slice(4).addClass('gallery-extra').hide();
     if (!$('.gallery-load').length) $('.gallery .gallery-grid').after('<button class="gallery-load" type="button">Load More Projects</button>');
     $(document).on('click', '.gallery-load', function () { $('.gallery-extra').slideDown(220).removeClass('gallery-extra'); $(this).remove(); });
 
-    function animateNumber(el) { var raw = $(el).text(); var m = raw.match(/(\d+)/); if (!m || el.dataset.counted) return; el.dataset.counted = '1'; var end = parseInt(m[1], 10); var obj = { v: 0 }; if (window.gsap) gsap.to(obj, { v: end, duration: 1.4, ease: 'power2.out', onUpdate: function () { $(el).text(raw.replace(m[1], Math.round(obj.v))); } }); }
+    function animateNumber(el) { var raw = $(el).text(); var m = raw.match(/(\d+)/); if (!m || el.dataset.counted) return; el.dataset.counted = '1'; if (/^0\d+$/.test(m[1])) return; var end = parseInt(m[1], 10); var obj = { v: 0 }; if (window.gsap) gsap.to(obj, { v: end, duration: 1.4, ease: 'power2.out', onUpdate: function () { $(el).text(raw.replace(m[1], Math.round(obj.v))); } }); }
     var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (entries) { entries.forEach(function (entry) { if (!entry.isIntersecting) return; var el = entry.target; el.classList.add('in-view'); if (window.gsap) gsap.fromTo(el, { y: 36, opacity: .2 }, { y: 0, opacity: 1, duration: .75, ease: 'power2.out' }); $(el).find('b,strong').each(function(){ animateNumber(this); }); io.unobserve(el); }); }, { threshold: .16 }) : null;
     if (io) $('.pd-section, .site-footer, .hero-section').each(function () { io.observe(this); });
 
