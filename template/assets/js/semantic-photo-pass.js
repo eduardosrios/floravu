@@ -15,7 +15,7 @@
   function apply() {
     setSources('.xr-section-8 .xr-season-grid article>img', ['s8-areca.jpg', 's8-lily.jpg', 's8-monstera.jpg']);
     setSources('.xr-section-14 .xr-shop-eight article>img', Array.from({ length: 8 }, function (_, index) { return 's14-photo-' + (index + 1) + '.jpg'; }));
-    [16, 129].forEach(function (id) {
+    [129].forEach(function (id) {
       setSources('.xr-section-' + id + ' .xr-house-row article>img', Array.from({ length: 4 }, function (_, index) { return 's16-photo-' + (index + 1) + '.jpg'; }));
     });
     [18, 134].forEach(function (id) {

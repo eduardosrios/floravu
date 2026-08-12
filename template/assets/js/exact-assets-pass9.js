@@ -10,13 +10,41 @@
     if (!target) return;
     target.innerHTML = [
       "<div class='xr xr-15 xr-15-exact'>",
-      "<div class='xr15-side'><small>Plant Online</small><h3>Plants for boosting<br>and purifying</h3><img src='assets/images/exact/s15-plant.jpg' alt='Green indoor plant'></div>",
-      "<div class='xr15-main'><h2><span>TREE</span><img src='assets/images/exact/s15-flower.jpg' alt='Flower'><span>LOVE</span><br>LIFE SHINE</h2><a href='#services'>Choose Haven <i class='fa-solid fa-arrow-right' aria-hidden='true'></i></a><hr><small>Gardening Benefits</small><footer><p>A 2007 study discovered that the soil bacteria Mycobacterium vaccae increases serotonin, which helps to improve mood and reduce anxiety.</p><b>01</b></footer></div>",
+      "<div class='xr15-side'><small>Plant Caring</small><h3>Plants for boosting<br>and purifying</h3><figure class='xr15-plant-card'><img src='assets/images/exact/s15-plant.jpg' alt='Growline potted plant'><span class='xr15-plant-arrow' aria-hidden='true'><i class='fa-solid fa-arrow-up'></i></span></figure></div>",
+      "<div class='xr15-main'><h2><span class='xr15-line'><span>TREE</span><img src='assets/images/exact/s15-flower.jpg' alt='Pink flowers'><span>LOVE</span></span><span class='xr15-line'>LIFE SHINE</span></h2><a href='#services'>Choose Green <i class='fa-solid fa-chevron-right' aria-hidden='true'></i></a><hr><small>Gardening Benefits</small><footer><p>A 2007 study discovered <span aria-hidden='true'>🌸</span> that the soil bacteria Mycobacterium vaccae increases serotonin, which helps to improve mood and reduce anxiety.</p><b>01</b></footer></div>",
       "<img class='xr15-woman' src='assets/images/exact/s15-woman.jpg' alt='Gardener caring for plants'>",
       "</div>"
     ].join('');
   }
 
+  function applySection16() {
+    var target = host(16);
+    if (!target) return;
+    target.innerHTML = [
+      "<div class='xr xr-16 xr-16-exact'>",
+      "<header><h2>HOUSE <span class='xr16-plant-word'>PLANT<img src='assets/images/exact/s16-title-flower.png' alt='' aria-hidden='true'></span></h2><div class='xr16-note'><img src='assets/images/exact/s16-note-leaf.jpg' alt='' aria-hidden='true'><p>Best plants for boosting and<br>purifying oxygen</p></div></header>",
+      "<div class='xr-house-row'>",
+      "<article><div class='xr16-card-head'><strong data-counted='1'>P-9845</strong><span>5 <b aria-label='star'>★</b></span></div><img class='xr16-plant-photo' src='assets/images/semantic/s16-photo-1.jpg' alt='Asplenium in a white pot'><div class='xr16-card-meta'><span><small>PLANT</small><strong>Asplenium</strong></span><span><small>SIZE</small><strong>Partial</strong></span></div></article>",
+      "<article><div class='xr16-card-head'><strong data-counted='1'>P-7845</strong><span>5 <b aria-label='star'>★</b></span></div><img class='xr16-plant-photo' src='assets/images/semantic/s16-photo-2.jpg' alt='Blue succulent in a terracotta pot'><div class='xr16-card-meta'><span><small>PLANT</small><strong>Succulent</strong></span><span><small>SIZE</small><strong>Semi</strong></span></div></article>",
+      "<article><div class='xr16-card-head'><strong data-counted='1'>P-6345</strong><span>5 <b aria-label='star'>★</b></span></div><img class='xr16-plant-photo' src='assets/images/semantic/s16-photo-3.jpg' alt='Red flowering Monstera in a white pot'><div class='xr16-card-meta'><span><small>PLANT</small><strong>Monstera</strong></span><span><small>SIZE</small><strong>Small</strong></span></div></article>",
+      "<article><div class='xr16-card-head'><strong data-counted='1'>P-1945</strong><span>5 <b aria-label='star'>★</b></span></div><img class='xr16-plant-photo' src='assets/images/semantic/s16-photo-4.jpg' alt='Aloe Vera in a white pot'><div class='xr16-card-meta'><span><small>PLANT</small><strong>Aloe Vera</strong></span><span><small>SIZE</small><strong>Medium</strong></span></div></article>",
+      "</div></div>"
+    ].join('');
+  }
+  function applySection18() {
+    var target = host(18);
+    if (!target) return;
+    target.innerHTML = [
+      "<div class='xr xr-18 xr-18-html'>",
+      "<div class='xr18-service-cards'>",
+      "<article><img src='assets/images/semantic/s18-photo-1.jpg' alt='Landscape designer working beside a pool'><div class='xr18-service-copy'><span class='xr18-service-icon'><i class='fa-solid fa-compass-drafting' aria-hidden='true'></i></span><h3>Landscape Design</h3><p>Our team of experienced staff work.</p><a href='#services' aria-label='Explore Landscape Design'><i class='fa-solid fa-arrow-right' aria-hidden='true'></i></a></div></article>",
+      "<article><img src='assets/images/semantic/s18-photo-2.jpg' alt='Gardening specialist planning seasonal planting'><div class='xr18-service-copy'><span class='xr18-service-icon'><i class='fa-solid fa-seedling' aria-hidden='true'></i></span><h3>Seasonal Plantings</h3><p>Our team of experienced staff work.</p><a href='#services' aria-label='Explore Seasonal Plantings'><i class='fa-solid fa-arrow-right' aria-hidden='true'></i></a></div></article>",
+      "<article><img src='assets/images/semantic/s18-photo-3.jpg' alt='Gardener renovating a planting bed'><div class='xr18-service-copy'><span class='xr18-service-icon'><i class='fa-solid fa-plant-wilt' aria-hidden='true'></i></span><h3>Garden Renovation</h3><p>Our team of experienced staff work.</p><a href='#services' aria-label='Explore Garden Renovation'><i class='fa-solid fa-arrow-right' aria-hidden='true'></i></a></div></article>",
+      "</div>",
+      "<div class='xr18-about-html'><div class='xr18-about-photo'><img src='assets/images/semantic/s18-about-photo.jpg' alt='Greenaura gardening specialist'></div><div class='xr18-about-copy'><small><i class='fa-solid fa-seedling' aria-hidden='true'></i> About Us</small><h2>About Greenaura</h2><p>At Greenaura, we are committed to environmentally sustainable gardening practices that promote biodiversity, conserve resources, and minimize our environmental footprint. From water-wise irrigation systems to organic.</p><div class='xr18-solutions'><strong><i class='fa-solid fa-person-digging' aria-hidden='true'></i><span>Customized<br>Solutions</span></strong><strong><i class='fa-solid fa-seedling' aria-hidden='true'></i><span>Customized<br>Solutions</span></strong></div></div></div>",
+      "</div>"
+    ].join('');
+  }
   function applySection17() {
     var target = host(17);
     if (!target) return;
@@ -71,7 +99,7 @@
   }
 
   function apply() {
-    applySection15(); applySection17(); applySection107(); applySection115(); applySection122();
+    applySection15(); applySection16(); applySection17(); applySection18(); applySection107(); applySection115(); applySection122();
   }
 
   if (window.jQuery) window.jQuery(apply);
