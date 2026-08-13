@@ -914,18 +914,18 @@
     transition: max-height .5s cubic-bezier(.22, .72, .22, 1), opacity .28s ease, transform .4s cubic-bezier(.22, .72, .22, 1) !important;
   }
 
-  .video-reference-3 .video-reference-grid article:not(.is-active) .video-panel-copy h2,
-  .video-reference-3 .video-reference-grid article:not(.is-active) .video-panel-copy h3 {
+  .video-reference-3 .video-reference-grid article:not(.is-active):not(.is-default) .video-panel-copy h2,
+  .video-reference-3 .video-reference-grid article:not(.is-active):not(.is-default) .video-panel-copy h3 {
     font-size: clamp(24px, 2vw, 31px) !important;
   }
 
-  .video-reference-3 .video-reference-grid article.is-active .video-panel-copy h2,
-  .video-reference-3 .video-reference-grid article.is-active .video-panel-copy h3 {
+  .video-reference-3 .video-reference-grid article:is(.is-active, .is-default) .video-panel-copy h2,
+  .video-reference-3 .video-reference-grid article:is(.is-active, .is-default) .video-panel-copy h3 {
     margin-bottom: clamp(10px, .85vw, 13px) !important;
     font-size: clamp(42px, 4.1vw, 63px) !important;
   }
 
-  .video-reference-3 .video-reference-grid article.is-active .video-panel-copy p {
+  .video-reference-3 .video-reference-grid article:is(.is-active, .is-default) .video-panel-copy p {
     max-height: 96px;
     opacity: 1;
     transform: none;
@@ -936,6 +936,39 @@
   .video-reference-3 .video-panel-copy h2,
   .video-reference-3 .video-panel-copy h3,
   .video-reference-3 .video-panel-copy p {
+    transition: none !important;
+  }
+}
+.video-reference-3 .video-reference-grid article.is-default { flex-grow: 2.2; }
+
+/* Section 03 contextual controls: ribbons and arrows only appear for hover/focus state. */
+.video-reference-3 .video-panel-tags,
+.video-reference-3 .video-panel-arrow {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  transform: translateY(-8px) scale(.96);
+  transition: visibility 0s linear .28s, opacity .28s ease, transform .4s cubic-bezier(.22, .72, .22, 1) !important;
+}
+
+.video-reference-3 .video-reference-grid article.is-active .video-panel-tags,
+.video-reference-3 .video-reference-grid article.is-active .video-panel-arrow {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none;
+  transition-delay: 0s !important;
+}
+
+.video-reference-3 .video-panel-tags span {
+  border-color: #fff !important;
+  background: #fff !important;
+  color: #000 !important;
+  font-size: 16px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video-reference-3 .video-panel-tags,
+  .video-reference-3 .video-panel-arrow {
     transition: none !important;
   }
 }
